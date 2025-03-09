@@ -1,0 +1,171 @@
+﻿<!-- HTML Content -->
+@{
+    Layout = null;
+    ViewData["Title"] = "NewFeed";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Music Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="~/css/profileuser.css">
+</head>
+<body onclick="closeAll(event)">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="sidebar-toggle" onclick="toggleSidebar(event)">☰</button>
+        <div class="logoimg"> <img src="~/img/lgo.png" /></div>
+        <div class="logo">Your Library</div>
+        <div class="sidebar-section">
+            <p>Your music, our community!</p>
+            <button class="sidebar-button" onclick="toggleChatBox(event, 'playlistBox')">Create playlist</button>
+        </div>
+
+        <div class="sidebar-section">
+            <p>Your sound, your story, your stage</p>
+            <button class="sidebar-button" onclick="toggleChatBox(event, 'storyBox')">Share your story</button>
+        </div>
+
+        <div class="">
+            <h3>Trending artists ...</h3>
+            <div class="artist-list">
+                <div class="artist"></div>
+                <div class="artist"></div>
+                <div class="artist more">+1</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Boxes -->
+    <div class="chat-box" id="playlistBox">
+        <h3>Create Playlist</h3>
+        <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
+    </div>
+
+    <div class="chat-box" id="storyBox">
+        <h3>Share Your Story</h3>
+        <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content-wrapper">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="What do you want to heard">
+                </div>
+                <div class="auth-buttons">
+                    <button class="auth-button register" onclick="location.href='@Url.Action("Register", "Account")'">Đăng Ký</button>
+                    <button class="auth-button login" onclick="location.href='@Url.Action("Login", "Account")'">Đăng Nhập</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <div class="profile">
+                <div class="top-profile">
+                    <div class="avatar"></div>
+                    <div class="name-id">
+                        <div class="username">JACK - J97</div>
+                        <div class="handle">jack3.5cu</div>
+                    </div>
+
+                    <button class="follow-btn" onclick="toggleFollow()">Follow</button>
+                </div>
+
+                <div class="tabs">
+                    <div class="tab active" onclick="showContent('status')">Status</div>
+                    <div class="tab" onclick="showContent('song')">Song</div>
+                </div>
+                <div class="content" id="status">
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="post-avatar avatar-red">M</div>
+                            <div class="post-info">
+                                <div class="post-author">Jack - j97 <span class="verified-badge">🔥</span></div>
+                                <div class="post-time">3,5 phút trước</div>
+                            </div>
+                            <div class="post-options" onclick="togglePostMenu(event, this)">•••</div>
+                            <div class="post-menu">
+                                <button class="menu-item">Delete</button>
+                                <button class="menu-item">Report</button>
+                            </div>
+                        </div>
+
+                        <div class="post-content">
+                            <p>Ngưỡng mộ tình cảm của Đóm dành cho Jack và ngược lại. Dưới đây là bài hát tri ân cho cộng đồng việt nam.</p>
+                        </div>
+
+                        <div class="audio-player">
+                            <button class="play-button">▶</button>
+                            <span>3:14</span>
+                            <div class="song-progress"></div>
+                            <div class="song-info">Song name #1</div>
+                        </div>
+
+                        <div class="post-actions">
+                            <div class="action-group">
+                                <div class="action-button">
+                                    <i class="far fa-thumbs-up"></i> 38
+                                </div>
+                                <div class="action-button">
+                                    <i class="far fa-thumbs-down"></i> 100
+                                </div>
+                                <div class="action-button">
+                                    <i class="far fa-comment"></i> 33
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content" id="song" style="display: none;">Danh sách bài hát...</div>
+            </div>
+        </div>
+
+        <script>
+            function toggleSidebar(event) {
+                event.stopPropagation();
+                document.getElementById('sidebar').classList.toggle('collapsed');
+            }
+
+            function toggleChatBox(event, boxId) {
+                event.stopPropagation();
+                closeAll();
+                document.getElementById(boxId).style.display = 'block';
+            }
+
+
+
+            function closeAll(event) {
+                if (event && (event.target.closest('.chat-box') || event.target.closest('.sidebar-button') || event.target.closest('.post-options'))) return;
+                document.querySelectorAll('.chat-box, .post-menu').forEach(el => el.style.display = 'none');
+            }
+
+
+                function showContent(type) {
+                            document.getElementById('status').style.display = type === 'status' ? 'block' : 'none';
+                            document.getElementById('song').style.display = type === 'song' ? 'block' : 'none';
+
+                            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+                            event.target.classList.add('active');
+                        }
+
+                        function toggleFollow() {
+                            const button = document.querySelector('.follow-btn');
+                            if (button.classList.contains('followed')) {
+                                button.classList.remove('followed');
+                                button.innerHTML = 'Follow';
+                            } else {
+                                button.classList.add('followed');
+                                button.innerHTML = 'Followed ✓';
+                            }
+                        }
+        </script>
+</body>
+</html>

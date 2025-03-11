@@ -1,6 +1,8 @@
 ﻿@{
     Layout = null;
     ViewData["Title"] = "NewFeed";
+    var isAuthenticated = Context.Session.GetString("UserId") != null;
+    var avatarUrl = Context.Session.GetString("AvatarUrl") ?? "~/img/default-avatar.png";
 }
 
 <!DOCTYPE html>
@@ -41,14 +43,28 @@
     <!-- Chat Boxes -->
     <div class="chat-box" id="playlistBox">
         <h3>Create Playlist</h3>
-        <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
-        @* <button class="close-button" onclick="toggleChatBox(event, 'playlistBox')">✖</button> *@
+        @if (isAuthenticated)
+        {
+            <input type="text" placeholder="Enter playlist name" />
+            <button class="message-login-button">Create</button>
+        }
+        else
+        {
+            <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
+        }
     </div>
 
     <div class="chat-box" id="storyBox">
         <h3>Share Your Story</h3>
-        <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
-        @* <button class="close-button" onclick="toggleChatBox(event, 'storyBox')">✖</button> *@
+        @if (isAuthenticated)
+        {
+            <textarea placeholder="Write your story..."></textarea>
+            <button class="message-login-button">Post</button>
+        }
+        else
+        {
+            <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
+        }
     </div>
 
     <!-- Main Content Area -->
@@ -58,11 +74,24 @@
             <div class="search-container">
                 <div class="search-box">
                     <i class="fas fa-search search-icon"></i>
-                    <input type="text" placeholder="What do you want to heard">
+                    <input type="text" placeholder="What do you want to hear?">
                 </div>
                 <div class="auth-buttons">
-                    <button class="auth-button register" onclick="location.href='@Url.Action("Register", "Account")'">Đăng Ký</button>
-                    <button class="auth-button login" onclick="location.href='@Url.Action("Login", "Account")'">Đăng Nhập</button>
+                    @if (isAuthenticated)
+                    {
+                        <div class="avatar-container" onclick="toggleProfileMenu(event)">
+                            <img src="~/img/avatar.jpg" alt="Avatar" class="user-avatar">
+                            <div class="profile-menu" id="profileMenu">
+                                <a href="@Url.Action("Profile", "Account")">Profile</a>
+                                <a href="@Url.Action("Logout", "Account")">Logout</a>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <button class="auth-button register" onclick="location.href='@Url.Action("Register", "Account")'">Đăng Ký</button>
+                        <button class="auth-button login" onclick="location.href='@Url.Action("Login", "Account")'">Đăng Nhập</button>
+                    }
                 </div>
             </div>
         </div>
@@ -76,7 +105,10 @@
                 <button class="filter-tab">Nhạc mới sáng tác</button>
             </div>
 
-            <button onclick="location.href='@Url.Action("ProfileUser", "Home")'" class="add-post">+</button>
+            @if (isAuthenticated)
+            {
+                <button onclick="location.href='@Url.Action("ProfileUser", "Home")'" class="add-post">+</button>
+            }
 
             <!-- Post -->
             <div class="post">
@@ -122,6 +154,11 @@
     </div>
 
     <script>
+        function toggleProfileMenu(event) {
+            event.stopPropagation();
+            document.getElementById('profileMenu').classList.toggle('show');
+        }
+
         function toggleSidebar(event) {
             event.stopPropagation();
             document.getElementById('sidebar').classList.toggle('collapsed');
@@ -141,13 +178,51 @@
         }
 
         function closeAll(event) {
-            if (event && (event.target.closest('.chat-box') || event.target.closest('.sidebar-button') || event.target.closest('.post-options'))) return;
-            document.querySelectorAll('.chat-box, .post-menu').forEach(el => el.style.display = 'none');
+            if (event && (event.target.closest('.chat-box') || event.target.closest('.sidebar-button') || event.target.closest('.post-options') || event.target.closest('.avatar-container'))) return;
+            document.querySelectorAll('.chat-box, .post-menu, .profile-menu').forEach(el => el.style.display = 'none');
         }
     </script>
+
+    <style>
+        .avatar-container {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            left: 230px;
+            img
+
+        {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+        }
+
+
+        .profile-menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            min-width: 120px;
+        }
+
+            .profile-menu a {
+                display: block;
+                padding: 8px;
+                text-decoration: none;
+                color: black;
+            }
+
+            .profile-menu.show {
+                display: block;
+            }
+
+    </style>
 </body>
-</html>@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+</html>

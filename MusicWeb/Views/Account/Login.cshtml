@@ -14,8 +14,9 @@
 </head>
 <body>
     <div class="container" id="container">
+        <!-- Form Đăng ký -->
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form method="post" asp-action="Register" asp-controller="Account">
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -23,14 +24,20 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <button>Sign Up</button>
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Password" required />
+                @if (ViewBag.RegisterError != null)
+                {
+                    <p style="color: red;">@ViewBag.RegisterError</p>
+                }
+                <button type="submit">Sign Up</button>
             </form>
         </div>
+
+        <!-- Form Đăng nhập -->
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form method="post" asp-action="Login" asp-controller="Account">
                 <h1>Sign in</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -38,12 +45,18 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Password" required />
                 <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
+                @if (ViewBag.Error != null)
+                {
+                    <p style="color: red;">@ViewBag.Error</p>
+                }
+                <button type="submit">Sign In</button>
             </form>
         </div>
+
+        <!-- Hiệu ứng chuyển đổi -->
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
@@ -59,6 +72,7 @@
             </div>
         </div>
     </div>
+
     <script>
         const signUpButton = document.getElementById('signUp');
         const signInButton = document.getElementById('signIn');
@@ -73,7 +87,7 @@
         });
 
         // Kiểm tra nếu URL có query `?register=true` thì mặc định mở form đăng ký
-            document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function () {
             const container = document.getElementById('container');
             const urlParams = new URLSearchParams(window.location.search);
             const isRegister = urlParams.get('register');
@@ -84,7 +98,6 @@
                 container.classList.remove("right-panel-active"); // Hiển thị form đăng nhập
             }
         });
-
     </script>
 
     <footer>

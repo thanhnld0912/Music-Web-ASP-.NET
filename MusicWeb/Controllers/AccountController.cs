@@ -13,6 +13,10 @@ namespace MusicWeb.Controllers
         {
             _context = context;
         }
+        public IActionResult Profile()
+        {
+            return View();
+        }
 
         public IActionResult Login()
         {
@@ -28,6 +32,7 @@ namespace MusicWeb.Controllers
             {
                 HttpContext.Session.SetString("UserId", user.Id.ToString());
                 HttpContext.Session.SetString("UserRole", user.Role);
+                HttpContext.Session.SetString("Username", user.Username);
 
                 if (user.Role == "Admin")
                     return RedirectToAction("Dashboard", "Admin");
@@ -37,6 +42,33 @@ namespace MusicWeb.Controllers
 
             ViewBag.Error = "Invalid email or password.";
             return View();
+        }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login");
+        }
+
+        public IActionResult Register()
+        {
+            return RedirectToAction("Login", new { register = "true" });
+        }
+
+        [HttpPost]
+        public IActionResult Register(string name, string email, string password)
+        {
+            if (_context.Users.Any(u => u.Email == email))
+            {
+                ViewBag.RegisterError = "Email already exists.";
+                return View("Login");
+            }
+
+            var newUser = new User { Username = name, Email = email, Password = password, Role = "User" };
+            _context.Users.Add(newUser);
+            _context.SaveChanges();
+
+            return RedirectToAction("Login");
         }
 
         /*Wait until finish figma)*/
@@ -62,33 +94,7 @@ namespace MusicWeb.Controllers
         //}
 
 
-        public IActionResult Logout()
-        {
-            HttpContext.Session.Clear();
-            return RedirectToAction("Login");
-        }
 
-        public IActionResult Register()
-        {
-            return RedirectToAction("Login", new { register = "true" });
-        }
-
-
-        [HttpPost]
-        public IActionResult Register(string name, string email, string password)
-        {
-            if (_context.Users.Any(u => u.Email == email))
-            {
-                ViewBag.RegisterError = "Email already exists.";
-                return View("Login");
-            }
-
-            var newUser = new User { Username = name, Email = email, Password = password, Role = "User" };
-            _context.Users.Add(newUser);
-            _context.SaveChanges();
-
-            return RedirectToAction("Login");
-        }
 
         /*Wait until finish figma*/
         //[HttpPost]

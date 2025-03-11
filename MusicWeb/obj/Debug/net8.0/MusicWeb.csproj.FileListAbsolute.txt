@@ -343,3 +343,4 @@ D:\.net\WebMusicNew\Music-Web-ASP-.NET\MusicWeb\obj\Debug\net8.0\refint\MusicWeb
 D:\.net\WebMusicNew\Music-Web-ASP-.NET\MusicWeb\obj\Debug\net8.0\MusicWeb.pdb
 D:\.net\WebMusicNew\Music-Web-ASP-.NET\MusicWeb\obj\Debug\net8.0\MusicWeb.genruntimeconfig.cache
 D:\.net\WebMusicNew\Music-Web-ASP-.NET\MusicWeb\obj\Debug\net8.0\ref\MusicWeb.dll
+D:\FPT\CN6\MusicWeb\MusicWeb\obj\Debug\net8.0\MusicWeb.sourcelink.json

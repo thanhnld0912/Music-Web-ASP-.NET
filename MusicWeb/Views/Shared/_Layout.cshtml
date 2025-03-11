@@ -4,88 +4,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Music Web</title>
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMUeIxlfzO7ROUst5PurdO4jFqFNp25E5Pb4j" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style-carousel.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo">
-            <a href="@Url.Action("NewFeed", "Home")">
-                <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" alt="Logo" />
-            </a>
-        </div>
-        <div class="navigation">
-            <ul>
-                <li><a href="#"><span class="fa fa-home"></span> <span>Home</span></a></li>
-                <li><a href="#"><span class="fa fa-search"></span> <span>Search</span></a></li>
-                <li><a href="#"><span class="fa fas fa-book"></span> <span>Your Library</span></a></li>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo và tên Melofy -->
+            <div class="navbar-logo">
+                <img src="/img/lgo.png" alt="Logo" class="logo-img" />
+                <span class="melofy-text">Melofy</span>
+            </div>
+
+            <!-- Menu items -->
+            <ul class="navbar-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
-        </div>
-    </div>
 
-    <div class="main-container">
-        <div class="topbar">
-            <div class="prev-next-buttons">
-                <button type="button" class="fa fas fa-chevron-left"></button>
-                <button type="button" class="fa fas fa-chevron-right"></button>
+            <!-- Button Login on the right -->
+            <div class="navbar-login">
+                <button onclick="location.href='@Url.Action("Login", "Account")'" class="login-button">Login</button>
             </div>
-            <div class="navbar">
-                <ul>
-                    <li><a href="#">Premium</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Download</a></li>
-                    <li class="divider">|</li>
-
-                    @if (Context.Session.GetString("UserId") != null)
-                    {
-                        <li class="user-menu">
-                            <div class="user-icon">
-                                <img src="~/images/default-avatar.png" id="userAvatar" alt="User Avatar">
-                                <div class="dropdown-menu">
-                                    <a href="@Url.Action("Profile", "Account")">Profile</a>
-                                    @if (Context.Session.GetString("UserRole") == "Admin")
-                                    {
-                                        <a href="@Url.Action("Manage", "Admin")">Manage</a>
-                                    }
-                                    <a href="@Url.Action("Logout", "Account")">Logout</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li><i class="fa fa-bell notification-icon"></i></li>
-                    }
-                    else
-                    {
-                        <li><a href="@Url.Action("Register", "Account")">Sign Up</a></li>
-                        <a href="@Url.Action("Login", "Account")" class="btn-login">Log In</a>
-                    }
-                </ul>
-            </div>
-
-
         </div>
+    </nav>
 
-        <main>
-            @RenderBody()
-        </main>
-
-        <div class="spotify-playlists">
-            <h2>Spotify Playlists</h2>
-            <div class="list">
+    <div class="content-width">
+        <div class="slideshow">
+            <!-- Slideshow Items -->
+            <div class="slideshow-items">
                 <div class="item">
-                    <img src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db" />
-                    <div class="play"><span class="fa fa-play"></span></div>
-                    <h4>Today's Top Hits</h4>
-                    <p>Rema & Selena Gomez are on top of the...</p>
+                    <div class="item-image-container">
+                        <img class="item-image" src="/img/Image1.jpg" />
+                    </div>
+                    <!-- Staggered Header Elements -->
+                    <div class="item-header">
+                        <span class="vertical-part"><b>N</b></span>
+                        <span class="vertical-part"><b>i</b></span>
+                        <span class="vertical-part"><b>k</b></span>
+                        <span class="vertical-part"><b>e</b></span>
+                    </div>
+                    <!-- Staggered Description Elements -->
+                    <div class="item-description">
+                        <span class="vertical-part">
+                            <b>Nike</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>ipsum</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>dolor</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>sit</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>amet,</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>consectetur</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>adipiscing</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>elit.</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Pellentesque</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>elementum</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>gravida</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>ex</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>at</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>maximus.</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Nullam</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>quis</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>leo</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>ipsum.</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Lorem</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>ipsum</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Nam</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>consectetur</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>malesuada</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>blandit.</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Mauris</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>vulputate</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>purus</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>id</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>dolor</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>euismod</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>varius.</b>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-image-container">
+                        <img class="item-image" src="/img/Image2.jpg" />
+                    </div>
+                    <!-- Staggered Header Elements -->
+                    <div class="item-header">
+                        <span class="vertical-part"><b>S</b></span>
+                        <span class="vertical-part"><b>p</b></span>
+                        <span class="vertical-part"><b>o</b></span>
+                        <span class="vertical-part"><b>t</b></span>
+                        <span class="vertical-part"><b>i</b></span>
+                        <span class="vertical-part"><b>f</b></span>
+                        <span class="vertical-part"><b>y</b></span>
+                    </div>
+                    <!-- Staggered Description Elements -->
+                    <div class="item-description">
+                        <span class="vertical-part">
+                            <b>Spotify</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>ipsum</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>dolor</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>sit</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>amet,</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>consectetur</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>adipiscing</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>elit.</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Pellentesque</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>elementum</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>gravida</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>ex</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>at</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>maximus.</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Nullam</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>quis</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>leo</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>ipsum.</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Lorem</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>ipsum</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Nam</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>consectetur</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>malesuada</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>blandit.</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Mauris</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>vulputate</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>purus</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>id</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>dolor</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>euismod</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>varius.</b>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-image-container">
+                        <img class="item-image" src="~/img/Image3.jpg" />
+                    </div>
+                    <!-- Staggered Header Elements -->
+                    <div class="item-header">
+                        <span class="vertical-part"><b>A</b></span>
+                        <span class="vertical-part"><b>i</b></span>
+                        <span class="vertical-part"><b>r</b></span>
+                        <span class="vertical-part"><b>b</b></span>
+                        <span class="vertical-part"><b>n</b></span>
+                        <span class="vertical-part"><b>b</b></span>
+                    </div>
+                    <!-- Staggered Description Elements -->
+                    <div class="item-description">
+                        <span class="vertical-part">
+                            <b>Airbnb</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>ipsum</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>dolor</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>sit</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>amet,</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>consectetur</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>adipiscing</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>elit.</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Pellentesque</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>elementum</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>gravida</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>ex</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>at</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>maximus.</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Nullam</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>quis</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>leo</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>ipsum.</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Lorem</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>ipsum</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Nam</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>consectetur</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>malesuada</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>blandit.</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>Mauris</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>vulputate</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>purus</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>id</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>dolor</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>euismod</b>
+                        </span>
+                        <span class="vertical-part">
+                            <b>varius.</b>
+                        </span>
+                    </div>
                 </div>
             </div>
+            <div class="item-button-container">
+                <a href="@Url.Action("NewFeed", "Home")">
+                    <button class="item-button">Explore Now</button>
+                </a>
+            </div>
+            <div class="controls">
+                <ul>
+                    <li class="control" data-index="0"></li>
+                    <li class="control" data-index="1"></li>
+                    <li class="control" data-index="2"></li>
+                </ul>
+            </div>
         </div>
     </div>
-
+    <main>
+        @RenderBody()
+    </main>
     <footer>
         <p>&copy; @DateTime.Now.Year - My Music Website</p>
     </footer>
+    <script>
+                const items = document.querySelectorAll('.item'),
+          controls = document.querySelectorAll('.control'),
+          headerItems = document.querySelectorAll('.item-header'),
+          descriptionItems = document.querySelectorAll('.item-description'),
+          activeDelay = .76,
+          interval = 5000;
+
+        let current = 0;
+
+        const slider = {
+          init: () => {
+            controls.forEach(control => control.addEventListener('click', (e) => { slider.clickedControl(e) }));
+            controls[current].classList.add('active');
+            items[current].classList.add('active');
+          },
+          nextSlide: () => { // Increment current slide and add active class
+            slider.reset();
+            if (current === items.length - 1) current = -1; // Check if current slide is last in array
+            current++;
+            controls[current].classList.add('active');
+            items[current].classList.add('active');
+            slider.transitionDelay(headerItems);
+            slider.transitionDelay(descriptionItems);
+          },
+          clickedControl: (e) => { // Add active class to clicked control and corresponding slide
+            slider.reset();
+            clearInterval(intervalF);
+
+            const control = e.target,
+              dataIndex = Number(control.dataset.index);
+
+            control.classList.add('active');
+            items.forEach((item, index) => {
+              if (index === dataIndex) { // Add active class to corresponding slide
+                item.classList.add('active');
+              }
+            })
+            current = dataIndex; // Update current slide
+            slider.transitionDelay(headerItems);
+            slider.transitionDelay(descriptionItems);
+            intervalF = setInterval(slider.nextSlide, interval); // Fire that bad boi back up
+          },
+          reset: () => { // Remove active classes
+            items.forEach(item => item.classList.remove('active'));
+            controls.forEach(control => control.classList.remove('active'));
+          },
+          transitionDelay: (items) => { // Set incrementing css transition-delay for .item-header & .item-description, .vertical-part, b elements
+            let seconds;
+
+            items.forEach(item => {
+              const children = item.childNodes; // .vertical-part(s)
+              let count = 1,
+                delay;
+
+              item.classList.value === 'item-header' ? seconds = .015 : seconds = .007;
+
+              children.forEach(child => { // iterate through .vertical-part(s) and style b element
+                if (child.classList) {
+                  item.parentNode.classList.contains('active') ? delay = count * seconds + activeDelay : delay = count * seconds;
+                  child.firstElementChild.style.transitionDelay = `${delay}s`; // b element
+                  count++;
+                }
+              })
+            })
+          },
+        }
+
+        let intervalF = setInterval(slider.nextSlide, interval);
+        slider.init();
+    </script>
 </body>
 </html>

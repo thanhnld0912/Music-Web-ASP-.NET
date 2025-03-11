@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Loading...";
+    var targetUrl = ViewData["TargetUrl"]?.ToString(); // Lấy targetUrl từ ViewData
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="/css/loader.css">
+
+</head>
+<body>
+    <div class="loader">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <script>
+        // Sau 5 giây, chuyển hướng đến URL đích
+        setTimeout(function () {
+            var targetUrl = '@targetUrl'; // Lấy targetUrl từ ViewData
+            if (targetUrl) {
+                window.location.href = targetUrl; // Chuyển hướng đến URL đích
+            } else {
+                window.location.href = '/'; // Nếu không có URL đích, chuyển về trang chủ
+            }
+        }, 5000); // Chờ 5 giây rồi chuyển hướng
+    </script>
+</body>
+</html>

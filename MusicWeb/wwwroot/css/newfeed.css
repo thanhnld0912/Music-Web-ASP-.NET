@@ -179,19 +179,34 @@ body {
     left: 250px;
 }
 
-    .auth-button.register {
-        background-color: #fff;
-        color: #000;
-        font-weight: bold;
-        font-size: 15px;
-    }
+.auth-button.register {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
 
-    .auth-button.login {
-        background-color: #7449E1;
-        color: white;
-        font-weight: bold;
-        font-size: 15px;
-    }
+.auth-button.register:hover {
+    background-color: #f0f0f0;
+    color: #333;
+    transform: scale(1.1);
+}
+
+.auth-button.login {
+    background-color: #7449E1;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.auth-button.login:hover {
+    background-color: #5b32b4;
+    color: #e0e0e0;
+    transform: scale(1.1);
+}
+
 
 /* Main content */
 .main-content {
@@ -500,6 +515,9 @@ s
     cursor: pointer;
     padding: 5px 10px;
 }
+
+
+
 
 /*.post-menu {
     display: none;

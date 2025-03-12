@@ -4,9 +4,9 @@ namespace MusicWeb.Controllers
 {
     public class AdminController : Controller
     {
-        public IActionResult Dashboard()
+        public IActionResult NewFeed()
         {
-            return View();
+            return View(); 
         }
     }
 }

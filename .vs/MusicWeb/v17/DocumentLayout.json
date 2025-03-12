@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "D:\\.net\\WebMusicNEw\\Music-Web-ASP-.NET\\",
   "Documents": [
     {
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\shared\\loader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+=======
       "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\.net\\webmusicnew\\music-web-asp-.net\\musicweb\\views\\shared\\loader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+>>>>>>> c5c41307cd79f21f2f3c75668c5d58bd99fae3c2
       "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\shared\\loader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -19,11 +27,15 @@
       "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+=======
       "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\.net\\webmusicnew\\music-web-asp-.net\\musicweb\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\.net\\webmusicnew\\music-web-asp-.net\\musicweb\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+>>>>>>> c5c41307cd79f21f2f3c75668c5d58bd99fae3c2
       "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -106,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\.net\\WebMusicNEw\\Music-Web-ASP-.NET\\MusicWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "MusicWeb\\Views\\Shared\\_Layout.cshtml",
@@ -118,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "NewFeed.cshtml",
               "DocumentMoniker": "D:\\.net\\WebMusicNEw\\Music-Web-ASP-.NET\\MusicWeb\\Views\\Home\\NewFeed.cshtml",
               "RelativeDocumentMoniker": "MusicWeb\\Views\\Home\\NewFeed.cshtml",
@@ -142,19 +154,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\.net\\WebMusicNEw\\Music-Web-ASP-.NET\\MusicWeb\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "MusicWeb\\Views\\Account\\Login.cshtml",
               "ToolTip": "D:\\.net\\WebMusicNEw\\Music-Web-ASP-.NET\\MusicWeb\\Views\\Account\\Login.cshtml",
               "RelativeToolTip": "MusicWeb\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-11T05:58:22.671Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "loader.cshtml",
               "DocumentMoniker": "D:\\.net\\WebMusicNEw\\Music-Web-ASP-.NET\\MusicWeb\\Views\\Shared\\loader.cshtml",
               "RelativeDocumentMoniker": "MusicWeb\\Views\\Shared\\loader.cshtml",
@@ -167,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\.net\\WebMusicNEw\\Music-Web-ASP-.NET\\MusicWeb\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MusicWeb\\Controllers\\HomeController.cs",

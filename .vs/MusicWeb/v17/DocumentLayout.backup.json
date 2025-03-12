@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\FPT\\CN6\\MusicWeb\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\home\\newfeed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\home\\newfeed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\shared\\loader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\shared\\loader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "MusicWeb\\Views\\Shared\\_Layout.cshtml",
@@ -118,12 +118,11 @@
               "RelativeToolTip": "MusicWeb\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAGkBAAAAAAAAAAAuwHQBAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-11T07:40:48.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T07:40:48.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "NewFeed.cshtml",
               "DocumentMoniker": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Views\\Home\\NewFeed.cshtml",
               "RelativeDocumentMoniker": "MusicWeb\\Views\\Home\\NewFeed.cshtml",
@@ -131,8 +130,7 @@
               "RelativeToolTip": "MusicWeb\\Views\\Home\\NewFeed.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-11T06:03:34.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T06:03:34.425Z"
             },
             {
               "$type": "Document",
@@ -144,18 +142,17 @@
               "RelativeToolTip": "MusicWeb\\Views\\Account\\Profile.cshtml",
               "ViewState": "AgIAAPoAAAAAAAAAAAAuwAoBAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-10T05:50:05.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T05:50:05.078Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "MusicWeb\\Views\\Account\\Login.cshtml",
               "ToolTip": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Views\\Account\\Login.cshtml",
               "RelativeToolTip": "MusicWeb\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-11T05:58:22.671Z",
               "EditorCaption": ""
@@ -175,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MusicWeb\\Controllers\\HomeController.cs",
@@ -183,8 +180,7 @@
               "RelativeToolTip": "MusicWeb\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAA4wBkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T08:31:04.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T08:31:04.54Z"
             },
             {
               "$type": "Document",
@@ -196,8 +192,7 @@
               "RelativeToolTip": "MusicWeb\\Views\\Home\\ProfileUser.cshtml",
               "ViewState": "AgIAAHgAAAAAAAAAAAAAABAAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-10T05:55:34.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T05:55:34.92Z"
             },
             {
               "$type": "Document",
@@ -209,8 +204,7 @@
               "RelativeToolTip": "MusicWeb\\Controllers\\AccountController.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAA3wCwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T06:11:34.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T06:11:34.597Z"
             },
             {
               "$type": "Document",
@@ -222,8 +216,7 @@
               "RelativeToolTip": "MusicWeb\\wwwroot\\js\\layout.js",
               "ViewState": "AgIAADwAAAAAAAAAAAAAAEkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-12T05:40:57.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T05:40:57.817Z"
             },
             {
               "$type": "Document",

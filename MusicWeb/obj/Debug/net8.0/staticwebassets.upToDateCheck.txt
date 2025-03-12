@@ -11,6 +11,7 @@ wwwroot\img\Image1.jpg
 wwwroot\img\Image2.jpg
 wwwroot\img\Image3.jpg
 wwwroot\img\lgo.png
+wwwroot\js\layout.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

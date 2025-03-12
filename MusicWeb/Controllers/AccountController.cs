@@ -30,16 +30,16 @@ namespace MusicWeb.Controllers
 
             if (user != null)
             {
+                // Lưu thông tin người dùng vào session
                 HttpContext.Session.SetString("UserId", user.Id.ToString());
                 HttpContext.Session.SetString("UserRole", user.Role);
                 HttpContext.Session.SetString("Username", user.Username);
 
-                if (user.Role == "Admin")
-                    return RedirectToAction("Dashboard", "Admin");
-                else
-                    return RedirectToAction("Index", "Home");
+                // Chuyển hướng đến trang Loader sau khi đăng nhập thành công
+                return RedirectToAction("Loader");
             }
 
+            // Đăng nhập thất bại
             ViewBag.Error = "Invalid email or password.";
             return View();
         }

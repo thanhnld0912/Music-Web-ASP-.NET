@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\img\\lgo.png"
     },
     {
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\layout.js",
+      "PackagePath": "staticwebassets\\js\\layout.js"
+    },
+    {
       "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

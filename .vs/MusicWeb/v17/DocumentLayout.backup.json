@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\FPT\\CN6\\MusicWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\home\\newfeed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\home\\newfeed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\shared\\loader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\shared\\loader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\home\\newfeed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\home\\newfeed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,8 +114,8 @@
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "MusicWeb\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Views\\Shared\\_Layout.cshtml*",
-              "RelativeToolTip": "MusicWeb\\Views\\Shared\\_Layout.cshtml*",
+              "ToolTip": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MusicWeb\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAGkBAAAAAAAAAAAuwHQBAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-11T07:40:48.408Z",
@@ -123,13 +123,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "NewFeed.cshtml",
               "DocumentMoniker": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Views\\Home\\NewFeed.cshtml",
               "RelativeDocumentMoniker": "MusicWeb\\Views\\Home\\NewFeed.cshtml",
               "ToolTip": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Views\\Home\\NewFeed.cshtml",
               "RelativeToolTip": "MusicWeb\\Views\\Home\\NewFeed.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-11T06:03:34.425Z",
               "EditorCaption": ""
@@ -162,13 +162,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "loader.cshtml",
               "DocumentMoniker": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Views\\Shared\\loader.cshtml",
               "RelativeDocumentMoniker": "MusicWeb\\Views\\Shared\\loader.cshtml",
               "ToolTip": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Views\\Shared\\loader.cshtml",
               "RelativeToolTip": "MusicWeb\\Views\\Shared\\loader.cshtml",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBMAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-11T08:11:14.839Z",
               "EditorCaption": ""

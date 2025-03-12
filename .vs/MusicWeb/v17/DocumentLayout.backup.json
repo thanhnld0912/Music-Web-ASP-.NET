@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\FPT\\CN6\\MusicWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\home\\newfeed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|solutionrelative:musicweb\\views\\home\\newfeed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9448D339-2DD2-4F16-84FD-3F10945B5AE8}|MusicWeb\\MusicWeb.csproj|d:\\fpt\\cn6\\musicweb\\musicweb\\views\\shared\\loader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -122,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "NewFeed.cshtml",
               "DocumentMoniker": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Views\\Home\\NewFeed.cshtml",
               "RelativeDocumentMoniker": "MusicWeb\\Views\\Home\\NewFeed.cshtml",
@@ -159,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "loader.cshtml",
               "DocumentMoniker": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\Views\\Shared\\loader.cshtml",
               "RelativeDocumentMoniker": "MusicWeb\\Views\\Shared\\loader.cshtml",

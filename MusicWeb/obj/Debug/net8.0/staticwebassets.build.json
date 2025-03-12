@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PIRjySB5kvh/MM6nSH2AxrsDSM6X13XgkWuNIpJXjOg=",
+  "Hash": "gUc4rkoXxE5hVCE4OO1X+dWQOrLPY4q54EDgWXgGLZA=",
   "Source": "MusicWeb",
   "BasePath": "_content/MusicWeb",
   "Mode": "Default",
@@ -330,6 +330,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\lgo.png"
+    },
+    {
+      "Identity": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\layout.js",
+      "SourceId": "MusicWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\",
+      "BasePath": "_content/MusicWeb",
+      "RelativePath": "js/layout#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w8uvosi254",
+      "Integrity": "IK3Xqm6r7+yxEp79fjW6QN0XasgspFpINXTtgGwyR3w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\layout.js"
     },
     {
       "Identity": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\site.js",
@@ -2614,6 +2635,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-+ZQxTuytvGn81K97uhQuKhM1MeiRrLK/lZpmA6oKpnI="
+        }
+      ]
+    },
+    {
+      "Route": "js/layout.js",
+      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\layout.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3118"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IK3Xqm6r7+yxEp79fjW6QN0XasgspFpINXTtgGwyR3w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 05:41:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IK3Xqm6r7+yxEp79fjW6QN0XasgspFpINXTtgGwyR3w="
+        }
+      ]
+    },
+    {
+      "Route": "js/layout.w8uvosi254.js",
+      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\layout.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3118"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IK3Xqm6r7+yxEp79fjW6QN0XasgspFpINXTtgGwyR3w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 05:41:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w8uvosi254"
+        },
+        {
+          "Name": "label",
+          "Value": "js/layout.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IK3Xqm6r7+yxEp79fjW6QN0XasgspFpINXTtgGwyR3w="
         }
       ]
     },

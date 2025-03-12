@@ -20,12 +20,9 @@ namespace MusicWebApp.Controllers
         {
             return View();
         }
-        public IActionResult Loader(string targetUrl)
+        public IActionResult Loader()
         {
-            // Truyền targetUrl vào ViewData để sử dụng trong loader.cshtml nếu cần
-            ViewData["TargetUrl"] = targetUrl;
-
-            return View(); // Trả về trang Loader.cshtml
+            return View();
         }
     }
 }

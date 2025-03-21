@@ -1,6 +1,6 @@
 ﻿@{
     Layout = null;
-    ViewData["Title"] = "NewFeed";
+    ViewData["Title"] = "Profile";
     var isAuthenticated = Context.Session.GetString("UserId") != null;
     var avatarUrl = Context.Session.GetString("AvatarUrl") ?? "~/img/default-avatar.png";
     var username = Context.Session.GetString("Username") ?? "User";

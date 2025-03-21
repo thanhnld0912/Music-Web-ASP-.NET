@@ -13,7 +13,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddControllersWithViews();
 
-// ✅ Thêm dịch vụ Session
+// Thêm dịch vụ Session
 builder.Services.AddDistributedMemoryCache(); // Sử dụng bộ nhớ tạm
 builder.Services.AddSession(options =>
 {
@@ -22,15 +22,20 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+// Thêm HttpContextAccessor để truy cập Session từ view
+builder.Services.AddHttpContextAccessor();
+
 var app = builder.Build();
 
+// Cấu hình pipeline
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
-app.UseAuthorization();
 
-// ✅ Sử dụng Session Middleware
+// Sử dụng Session trước Authorization
 app.UseSession();
+
+app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",

@@ -20,9 +20,32 @@ namespace MusicWeb.Controllers
 
         public IActionResult Login()
         {
+            CreateAdminIfNotExist();
             return View();
         }
 
+        //Create admin because admin not exist
+        private void CreateAdminIfNotExist()
+        {
+            if (!_context.Users.Any(u => u.Email == "admin@musicweb.com"))
+            {
+                var admin = new User
+                {
+                    Username = "Admin",
+                    Email = "admin@musicweb.com",
+                    Password = "admin123", // Lưu ý: Cần mã hóa mật khẩu trong thực tế
+                    Role = "Admin"
+                };
+                _context.Users.Add(admin);
+                _context.SaveChanges();
+            }
+        }
+
+
+        public IActionResult Loader()
+        {
+            return View();
+        }
         [HttpPost]
         public IActionResult Login(string email, string password)
         {
@@ -36,7 +59,7 @@ namespace MusicWeb.Controllers
                 HttpContext.Session.SetString("Username", user.Username);
 
                 // Chuyển hướng đến trang Loader sau khi đăng nhập thành công
-                return RedirectToAction("Loader");
+                return RedirectToAction("Loader", "Account");
             }
 
             // Đăng nhập thất bại
@@ -70,59 +93,6 @@ namespace MusicWeb.Controllers
 
             return RedirectToAction("Login");
         }
-
-        /*Wait until finish figma)*/
-        //[HttpPost]
-        //public IActionResult Login(string email, string password)
-        //{
-        //    var user = _context.Users.FirstOrDefault(u => u.Email == email && u.Password == password);
-
-        //    if (user != null)
-        //    {
-        //        HttpContext.Session.SetString("UserId", user.Id.ToString());
-        //        HttpContext.Session.SetString("UserRole", user.Role);
-        //        HttpContext.Session.SetString("AvatarUrl", user.AvatarUrl ?? "/images/default-avatar.png");
-
-        //        if (user.Role == "Admin")
-        //            return RedirectToAction("Dashboard", "Admin");
-        //        else
-        //            return RedirectToAction("Index", "Home");
-        //    }
-
-        //    ViewBag.Error = "Invalid email or password.";
-        //    return View();
-        //}
-
-
-
-
-        /*Wait until finish figma*/
-        //[HttpPost]
-        //public IActionResult UpdateProfile(IFormFile avatarFile)
-        //{
-        //    var userId = HttpContext.Session.GetString("UserId");
-        //    if (userId == null) return RedirectToAction("Login");
-
-        //    var user = _context.Users.Find(int.Parse(userId));
-        //    if (user == null) return NotFound();
-
-        //    if (avatarFile != null)
-        //    {
-        //        var filePath = Path.Combine("wwwroot/images", avatarFile.FileName);
-        //        using (var stream = new FileStream(filePath, FileMode.Create))
-        //        {
-        //            avatarFile.CopyTo(stream);
-        //        }
-        //        user.AvatarUrl = "/images/" + avatarFile.FileName;
-        //        _context.SaveChanges();
-
-        //        HttpContext.Session.SetString("AvatarUrl", user.AvatarUrl);
-        //    }
-
-        //    return RedirectToAction("Profile");
-        //}
-
-
     }
 
 }

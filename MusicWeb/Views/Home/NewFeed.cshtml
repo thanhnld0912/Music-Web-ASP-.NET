@@ -1,159 +1,322 @@
-﻿@{
-    Layout = null;
-    ViewData["Title"] = "NewFeed";
-    var isAuthenticated = Context.Session.GetString("UserId") != null;
-    var avatarUrl = Context.Session.GetString("AvatarUrl") ?? "~/img/default-avatar.png";
-}
+﻿    @{
+        Layout = null;
+        ViewData["Title"] = "NewFeed";
+        var isAuthenticated = Context.Session.GetString("UserId") != null;
+        var userId = Context.Session.GetString("UserId");
+        var avatarUrl = Context.Session.GetString("AvatarUrl") ?? "~/img/avatar.jpg";
+        @model List<MusicWeb.Models.Post>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Music Web</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="~/css/newfeed.css">
-</head>
-<body onclick="closeAll(event)">
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <button class="sidebar-toggle" onclick="toggleSidebar(event)">☰</button>
-        <div class="logoimg"> <img src="~/img/lgo.png" /></div>
-        <div class="logo">Your Library</div>
-        <div class="sidebar-section">
-            <p>Your music, our community!</p>
-            <button class="sidebar-button" onclick="toggleChatBox(event, 'playlistBox')">Create playlist</button>
-        </div>
+    }
 
-        <div class="sidebar-section">
-            <p>Your sound, your story, your stage</p>
-            <button class="sidebar-button" onclick="toggleChatBox(event, 'storyBox')">Share your story</button>
-        </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - Music Web</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="~/css/newfeed.css">
+    </head>
+    <body onclick="closeAll(event)">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <button class="sidebar-toggle" onclick="toggleSidebar(event)">☰</button>
+            <div class="logoimg"> <img src="~/img/lgo.png" /></div>
+            <div class="logo">Your Library</div>
+            <div class="sidebar-section">
+                <p>Your music, our community!</p>
+                <button class="sidebar-button" onclick="toggleChatBox(event, 'playlistBox')">Create playlist</button>
+            </div>
 
-        <div class="">
-            <h3>Trending artists ...</h3>
-            <div class="artist-list">
-                <div class="artist"></div>
-                <div class="artist"></div>
-                <div class="artist more">+1</div>
+            <div class="sidebar-section">
+                <p>Your sound, your story, your stage</p>
+                <button class="sidebar-button" onclick="toggleChatBox(event, 'storyBox')">Share your story</button>
+            </div>
+
+            <div class="">
+                <h3>Trending artists ...</h3>
+                <div class="artist-list">
+                    <div class="artist"></div>
+                    <div class="artist"></div>
+                    <div class="artist more">+1</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Chat Boxes -->
-    <div class="chat-box" id="playlistBox">
-        <h3>Create Playlist</h3>
-        @if (isAuthenticated)
-        {
-            <input type="text" placeholder="Enter playlist name" />
-            <button class="message-login-button">Create</button>
-        }
-        else
-        {
-            <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
-        }
-    </div>
+        <!-- Chat Boxes -->
+        <div class="chat-box" id="playlistBox">
+            <h3>Create Playlist</h3>
+            @if (isAuthenticated)
+            {
+                <input type="text" placeholder="Enter playlist name" />
+                <button class="message-login-button">Create</button>
+            }
+            else
+            {
+                <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
+            }
+        </div>
 
-    <div class="chat-box" id="storyBox">
-        <h3>Share Your Story</h3>
-        @if (isAuthenticated)
-        {
-            <textarea placeholder="Write your story..."></textarea>
-            <button class="message-login-button">Post</button>
-        }
-        else
-        {
-            <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
-        }
-    </div>
+        <div class="chat-box" id="storyBox">
+            <h3>Share Your Story</h3>
+            @if (isAuthenticated)
+            {
+                <textarea placeholder="Write your story..."></textarea>
+                <button class="message-login-button">Post</button>
+            }
+            else
+            {
+                <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
+            }
+        </div>
 
-    <!-- Main Content Area -->
-    <div class="content-wrapper">
-        <!-- Navbar -->
-        <div class="navbar">
-            <div class="search-container">
-                <div class="search-box">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" placeholder="What do you want to hear?">
+        <!-- Main Content Area -->
+        <div class="content-wrapper">
+            <!-- Navbar -->
+            <div class="navbar">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="What do you want to hear?">
+                    </div>
+                    <div class="auth-buttons">
+                        @if (isAuthenticated)
+                        {
+                            <a href="@Url.Action("Profile", "Account")" class="avatar-container">
+                                <img src="~/img/avatar.jpg" alt="Avatar" class="user-avatar">
+                            </a>
+                        }
+                        else
+                        {
+                            <button class="auth-button login" onclick="location.href='@Url.Action("Login", "Account")'">Login</button>
+                        }
+                    </div>
                 </div>
-                <div class="auth-buttons">
-                    @if (isAuthenticated)
+            </div>
+
+            <!-- NewFeed Content -->
+            <div class="main-content">
+               
+                <div class="filter-tabs">
+                    <button class="filter-tab active">Tất cả</button>
+                    <button class="filter-tab">Bài viết</button>
+                    <button class="filter-tab">Nhạc Cover</button>
+                    <button class="filter-tab">Nhạc mới sáng tác</button>
+
+                @if (isAuthenticated)
+                {
+                    <button onclick="location.href='@Url.Action("UploadPage", "Song")'" class="add-post"><p>+</p></button>
+                }
+                </div>
+
+                <h2>New Feed</h2>
+
+
+            <div class="post-topuser">
+                <div class="post-topuser-left">
+                    @if (!Model.Any())
                     {
-                        <div class="avatar-container" onclick="toggleProfileMenu(event)">
-                            <img src="~/img/avatar.jpg" alt="Avatar" class="user-avatar">
-                            <div class="profile-menu" id="profileMenu">
-                                <a href="@Url.Action("Profile", "Account")">Profile</a>
-                                <a href="@Url.Action("Logout", "Account")">Logout</a>
-                            </div>
-                        </div>
+                        <p>No posts available.</p>
                     }
                     else
                     {
-                        <button class="auth-button register" onclick="location.href='@Url.Action("Register", "Account")'">Đăng Ký</button>
-                        <button class="auth-button login" onclick="location.href='@Url.Action("Login", "Account")'">Đăng Nhập</button>
+                        @foreach (var post in Model)
+                        {
+                            <div class="post" data-post-id="@post.Id">
+                                <!-- Post Header -->
+                                <div class="post-header">
+                                    <a href="@Url.Action("ProfileUser", "Home", new { id = post.UserId })"
+                                       class="post-avatar">@post.User.Username[0]</a>
+                                    <div class="post-info">
+                                        <div class="post-author">@post.User.Username</div>
+                                        <div class="post-time">@post.CreatedAt.ToString("dd/MM/yyyy HH:mm")</div>
+                                    </div>
+                                </div>
+
+                                <!-- Post Content -->
+                                <div class="post-content">
+                                    <p>@post.Content</p>
+                                    @if (!string.IsNullOrEmpty(post.ImageUrl))
+                                    {
+                                        <img src="@post.ImageUrl" class="post-image" />
+                                    }
+                                </div>
+
+                                <!-- Songs -->
+                                @if (post.Songs.Any())
+                                {
+                                    <div class="song-list">
+                                        @foreach (var song in post.Songs)
+                                        {
+                                            <div class="song-item">
+                                                <div class="song-info">
+                                                    <div class="song-container">
+                                                        <div class="custom-audio-player" data-song-url="@song.FileUrl">
+                                                            <div class="play-button">
+                                                                <i class="fas fa-play" id="play-icon-@song.Id"></i>
+                                                            </div>
+
+                                                            <div class="play-progress">
+                                                                <div class="time-display">0:00</div>
+                                                                <div class="progress-container" id="progress-container-@song.Id">
+                                                                    <div class="progress-bar" id="progress-bar-@song.Id"></div>
+                                                                </div>
+                                                            </div>
+
+                                                            <audio id="audio-@song.Id" style="display: none;">
+                                                                <source src="@song.FileUrl" type="audio/mpeg">
+                                                            </audio>
+                                                        </div>
+                                                        <div class="volume-control">
+                                                            <i class="fas fa-volume-up"></i>
+                                                            <input type="range" min="0" max="1" step="0.1" value="1" class="volume-slider" id="volume-slider-@song.Id">
+                                                        </div>
+                                                    </div>
+
+                                                    <span>@song.Title</span>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                }
+
+                                <!-- Post Actions -->
+                                <div class="post-actions">
+                                    <!-- Action buttons with integrated count -->
+                                    <div class="action-buttons-container">
+                                        @{
+                                            bool userLiked = ViewData[$"UserLiked_{post.Id}"] != null && (bool)ViewData[$"UserLiked_{post.Id}"];
+                                            bool userDisliked = ViewData[$"UserDisliked_{post.Id}"] != null && (bool)ViewData[$"UserDisliked_{post.Id}"];
+                                        }
+                                        <button class="fb-action-btn like-btn @(userLiked ? "active" : "")" onclick="likePost(this, @post.Id)">
+                                            <i class="fas fa-thumbs-up"></i>
+                                            <span>Like</span>
+                                            <span class="count-badge">@(post.Likes?.Count ?? 0)</span>
+                                        </button>
+                                        <button class="fb-action-btn dislike-btn @(userDisliked ? "active" : "")" onclick="dislikePost(this, @post.Id)">
+                                            <i class="fas fa-thumbs-down"></i>
+                                            <span>Dislike</span>
+                                            <span class="count-badge">@(post.Dislikes?.Count ?? 0)</span>
+                                        </button>
+                                        <button class="fb-action-btn comment-btn" onclick="toggleCommentSection(this, @post.Id)">
+                                            <i class="fas fa-comment"></i>
+                                            <span>Comment</span>
+                                            <span class="count-badge">@(post.Comments?.Count ?? 0)</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        }
                     }
                 </div>
+                <div class="top-user">
+
+                    <div class="panel-header">
+                        Melofy VIP members
+                    </div>
+
+                    <div class="vip-members">
+                        <div class="member-icon">
+                            <img src="/api/placeholder/30/30" alt="Member 1">
+                        </div>
+                        <div class="member-icon">
+                            <img src="/api/placeholder/30/30" alt="Member 2">
+                        </div>
+                        <div class="member-icon">
+                            <img src="/api/placeholder/30/30" alt="Member 3">
+                        </div>
+                        <div class="member-icon">
+                            #1
+                        </div>
+                    </div>
+
+                    <div class="top-artists">
+                        <div class="section-title">
+                            UK most streamed artists
+                        </div>
+
+                        <div class="artist-item">
+                            <div class="artist-rank rank-1">No.1</div>
+                            <div class="artist-icon">
+                                <img src="/api/placeholder/30/30" alt="Artist 1">
+                            </div>
+                            <div class="artist-desc">Description</div>
+                        </div>
+
+                        <div class="artist-item">
+                            <div class="artist-rank rank-2">No.2</div>
+                            <div class="artist-icon">
+                                <img src="/api/placeholder/30/30" alt="Artist 2">
+                            </div>
+                            <div class="artist-desc">Description</div>
+                        </div>
+
+                        <div class="artist-item">
+                            <div class="artist-rank rank-3">No.3</div>
+                            <div class="artist-icon">
+                                <img src="/api/placeholder/30/30" alt="Artist 3">
+                            </div>
+                            <div class="artist-desc">Description</div>
+                        </div>
+                    </div>
+
+                    <div class="time-section">
+                        <div class="time-label">Time</div>
+                        <div class="time-slider">
+                            <div class="time-progress"></div>
+                        </div>
+                        <div class="time-remaining">30 days left</div>
+                    </div>
+
+                    <div class="logo-section">
+                        <div class="logo">M</div>
+                        <div>Melofy VIP Member</div>
+                    </div>
+                </div>
+                
             </div>
+
+              
+            </div>
+
+     
+        </div>
         </div>
 
-        <!-- Main content -->
-        <div class="main-content">
-            <div class="filter-tabs">
-                <button class="filter-tab active">Tất cả</button>
-                <button class="filter-tab">Bài viết</button>
-                <button class="filter-tab">Nhạc Cover</button>
-                <button class="filter-tab">Nhạc mới sáng tác</button>
-            </div>
-
-            @if (isAuthenticated)
-            {
-                <button onclick="location.href='@Url.Action("ProfileUser", "Home")'" class="add-post">+</button>
-            }
-
-            <!-- Post -->
-            <div class="post">
-                <div class="post-header">
-                    <div class="post-avatar avatar-red">M</div>
-                    <div class="post-info">
-                        <div class="post-author">Jack - j97 <span class="verified-badge">🔥</span></div>
-                        <div class="post-time">3,5 phút trước</div>
+        <!-- Separated Comment Section - This will be displayed as an overlay -->
+        <div id="comment-overlay" class="comment-overlay">
+            <div class="comment-container">
+                <div class="comment-header">
+                    <h3>Comments</h3>
+                    <button class="close-comment-btn" onclick="closeCommentSection()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="fb-comment-section">
+                    <div class="fb-comment-input-container">
+                        <div class="comment-avatar">
+                            <img src="~/img/avatar.jpg" alt="avatar" class="comment-user-avatar">
+                        </div>
+                        <div class="fb-comment-input-wrapper">
+                            <input type="text" placeholder="Write a comment..." class="fb-comment-input">
+                            <div class="fb-comment-tools">
+                                <i class="fas fa-smile"></i>
+                                <i class="fas fa-camera"></i>
+                                <i class="fas fa-paper-plane" onclick="submitComment(event)"></i>
+                            </div>
+                        </div>
                     </div>
-                    <div class="post-options" onclick="togglePostMenu(event, this)">•••</div>
-                    <div class="post-menu">
-                        <button class="menu-item">Delete</button>
-                        <button class="menu-item">Report</button>
-                    </div>
-                </div>
-
-                <div class="post-content">
-                    <p>Ngưỡng mộ tình cảm của Đóm dành cho Jack và ngược lại. Dưới đây là bài hát tri ân cho cộng đồng việt nam.</p>
-                </div>
-
-                <div class="audio-player">
-                    <button class="play-button">▶</button>
-                    <span>3:14</span>
-                    <div class="song-progress"></div>
-                    <div class="song-info">Song name #1</div>
-                </div>
-
-                <div class="post-actions">
-                    <div class="action-group">
-                        <div class="action-button">
-                            <i class="far fa-thumbs-up"></i> 38
-                        </div>
-                        <div class="action-button">
-                            <i class="far fa-thumbs-down"></i> 100
-                        </div>
-                        <div class="action-button">
-                            <i class="far fa-comment"></i> 33
-                        </div>
+                    <div class="fb-comments-list">
+                        <!-- Comments will be added here -->
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
     <script>
+        let currentPostId = null;
+        const currentUserId = @(userId != null ? userId : "null");
+        let commentsStore = {};
+
         function toggleProfileMenu(event) {
             event.stopPropagation();
             document.getElementById('profileMenu').classList.toggle('show');
@@ -170,58 +333,446 @@
             document.getElementById(boxId).style.display = 'block';
         }
 
-        function togglePostMenu(event, element) {
-            event.stopPropagation();
-            closeAll();
-            const menu = element.nextElementSibling;
-            menu.style.display = 'block';
-        }
-
         function closeAll(event) {
-            if (event && (event.target.closest('.chat-box') || event.target.closest('.sidebar-button') || event.target.closest('.post-options') || event.target.closest('.avatar-container'))) return;
+            if (event && (event.target.closest('.chat-box') ||
+                        event.target.closest('.sidebar-button') ||
+                        event.target.closest('.post-options') ||
+                        event.target.closest('.avatar-container') ||
+                        event.target.closest('#comment-overlay'))) return;
+
             document.querySelectorAll('.chat-box, .post-menu, .profile-menu').forEach(el => el.style.display = 'none');
+
+            // Don't close comment overlay if clicked inside it
+            if (!event || !event.target.closest('#comment-overlay')) {
+                closeCommentSection();
+            }
         }
+
+        function likePost(button, postId) {
+            if (!currentUserId || currentUserId === "null") {
+                alert("Vui lòng đăng nhập để thích bài viết");
+                return;
+            }
+
+            const isActive = button.classList.contains('active');
+
+            // Nếu đã dislike, xóa dislike
+            const dislikeBtn = button.closest('.action-buttons-container').querySelector('.dislike-btn');
+            if (dislikeBtn.classList.contains('active')) {
+                dislikeBtn.classList.remove('active');
+                const dislikeCountEl = dislikeBtn.querySelector('.count-badge');
+                const currentDislikeCount = parseInt(dislikeCountEl.textContent);
+                if (currentDislikeCount > 0) {
+                    dislikeCountEl.textContent = currentDislikeCount - 1;
+                }
+            }
+
+            // Lấy số lượng like hiện tại
+            const likeCountEl = button.querySelector('.count-badge');
+            const currentCount = parseInt(likeCountEl.textContent);
+
+            // Tạo AJAX request
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", `/Post/LikePost/${postId}`, true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            // Debug output
+            console.log("Sending like request:", postId, currentUserId);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        console.log("Like response:", xhr.responseText);
+                        // Toggle trạng thái active và cập nhật số lượng
+                        if (isActive) {
+                            button.classList.remove('active');
+                            if (currentCount > 0) {
+                                likeCountEl.textContent = currentCount - 1;
+                            }
+                        } else {
+                            button.classList.add('active');
+                            likeCountEl.textContent = currentCount + 1;
+                        }
+                    } else {
+                        console.error("Lỗi khi thích bài viết:", xhr.responseText);
+                        alert("Không thể thích bài viết. Vui lòng thử lại sau.");
+                    }
+                }
+            };
+
+            xhr.send(JSON.stringify(parseInt(currentUserId)));
+        }
+
+        function dislikePost(button, postId) {
+            if (!currentUserId || currentUserId === "null") {
+                alert("Vui lòng đăng nhập để không thích bài viết");
+                return;
+            }
+
+            const isActive = button.classList.contains('active');
+
+            // Nếu đã like, xóa like
+            const likeBtn = button.closest('.action-buttons-container').querySelector('.like-btn');
+            if (likeBtn.classList.contains('active')) {
+                likeBtn.classList.remove('active');
+                const likeCountEl = likeBtn.querySelector('.count-badge');
+                const currentLikeCount = parseInt(likeCountEl.textContent);
+                if (currentLikeCount > 0) {
+                    likeCountEl.textContent = currentLikeCount - 1;
+                }
+            }
+
+            // Lấy số lượng dislike hiện tại
+            const dislikeCountEl = button.querySelector('.count-badge');
+            const currentCount = parseInt(dislikeCountEl.textContent);
+
+            // Tạo AJAX request
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", `/Post/DislikePost/${postId}`, true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            // Debug output
+            console.log("Sending dislike request:", postId, currentUserId);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        console.log("Dislike response:", xhr.responseText);
+                        // Toggle trạng thái active và cập nhật số lượng
+                        if (isActive) {
+                            button.classList.remove('active');
+                            if (currentCount > 0) {
+                                dislikeCountEl.textContent = currentCount - 1;
+                            }
+                        } else {
+                            button.classList.add('active');
+                            dislikeCountEl.textContent = currentCount + 1;
+                        }
+                    } else {
+                        console.error("Lỗi khi không thích bài viết:", xhr.responseText);
+                        alert("Không thể không thích bài viết. Vui lòng thử lại sau.");
+                    }
+                }
+            };
+
+            xhr.send(JSON.stringify(parseInt(currentUserId)));
+        }
+
+        function loadAllCommentCounts() {
+            const posts = document.querySelectorAll('.post');
+            posts.forEach(post => {
+                const postId = post.getAttribute('data-post-id');
+                if (postId) {
+                    fetchCommentData(postId);
+                }
+            });
+        }
+
+        function fetchCommentData(postId) {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", `/Post/GetComments/${postId}`, true);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        try {
+                            const comments = JSON.parse(xhr.responseText);
+
+                            // Lưu comments vào cache
+                            commentsStore[postId] = comments;
+
+                            // Update comment count
+                            updateCommentCountBadge(postId, comments.length);
+                        } catch (error) {
+                            console.error("Lỗi khi phân tích comments:", error);
+                        }
+                    } else {
+                        console.error("Lỗi khi tải comments:", xhr.responseText);
+                    }
+                }
+            };
+
+            xhr.send();
+        }
+
+        function toggleCommentSection(button, postId) {
+            event.stopPropagation();
+
+            if (!currentUserId) {
+                alert("Please login to view and add comments");
+                return;
+            }
+
+            currentPostId = postId;
+            const commentOverlay = document.getElementById('comment-overlay');
+            commentOverlay.style.display = 'flex';
+
+            const commentsList = commentOverlay.querySelector('.fb-comments-list');
+            commentsList.innerHTML = '';
+
+            // Use cached comments if available
+            if (commentsStore[postId] && commentsStore[postId].length > 0) {
+                commentsStore[postId].forEach(comment => {
+                    const commentItem = createCommentElement(comment);
+                    commentsList.appendChild(commentItem);
+                });
+            } else {
+                // If not cached yet, load them
+                loadComments(postId, commentsList);
+            }
+
+            const commentInput = commentOverlay.querySelector('.fb-comment-input');
+            if (commentInput) {
+                commentInput.focus();
+            }
+
+            button.classList.add('active');
+        }
+
+        function loadComments(postId, commentsList) {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", `/Post/GetComments/${postId}`, true);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        try {
+                            const comments = JSON.parse(xhr.responseText);
+
+                            // Lưu comments vào cache
+                            commentsStore[postId] = comments;
+
+                            // Hiển thị comments
+                            comments.forEach(comment => {
+                                const commentItem = createCommentElement(comment);
+                                commentsList.appendChild(commentItem);
+                            });
+
+                            // Update comment count badge
+                            updateCommentCountBadge(postId, comments.length);
+                        } catch (error) {
+                            console.error("Lỗi khi phân tích comments:", error);
+                        }
+                    } else {
+                        console.error("Lỗi khi tải comments:", xhr.responseText);
+                    }
+                }
+            };
+
+            xhr.send();
+        }
+
+        function updateCommentCountBadge(postId, count) {
+            const postElement = document.querySelector(`.post[data-post-id="${postId}"]`);
+            if (postElement) {
+                const commentCountEl = postElement.querySelector('.comment-btn .count-badge');
+                if (commentCountEl) {
+                    commentCountEl.textContent = count;
+                }
+            }
+        }
+
+        function closeCommentSection() {
+            document.getElementById('comment-overlay').style.display = 'none';
+
+            if (currentPostId) {
+                const postElement = document.querySelector(`.post[data-post-id="${currentPostId}"]`);
+                if (postElement) {
+                    const commentBtn = postElement.querySelector('.comment-btn');
+                    if (commentBtn) {
+                        commentBtn.classList.remove('active');
+                    }
+                }
+            }
+
+            currentPostId = null;
+        }
+
+        function submitComment(event) {
+            if (!currentUserId) {
+                alert("Vui lòng đăng nhập để bình luận");
+                return;
+            }
+
+            const commentSection = event.target.closest('.fb-comment-section');
+            const commentInput = commentSection.querySelector('.fb-comment-input');
+            const commentText = commentInput.value.trim();
+
+            if (commentText && currentPostId) {
+                // Tạo comment data object
+                const commentData = {
+                    content: commentText,
+                    userId: currentUserId
+                };
+
+                // Tạo AJAX request
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST", `/Post/AddComment/${currentPostId}`, true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            try {
+                                const response = JSON.parse(xhr.responseText);
+                                const commentsList = commentSection.querySelector('.fb-comments-list');
+
+                                // Lưu comment vào cache
+                                if (!commentsStore[currentPostId]) {
+                                    commentsStore[currentPostId] = [];
+                                }
+                                commentsStore[currentPostId].push(response);
+
+                                // Tạo và hiển thị comment mới
+                                const commentItem = createCommentElement(response);
+                                commentsList.appendChild(commentItem);
+
+                                // Update comment count badge
+                                updateCommentCountBadge(currentPostId, commentsStore[currentPostId].length);
+
+                                // Xóa nội dung input
+                                commentInput.value = '';
+                            } catch (error) {
+                                console.error("Lỗi khi phân tích phản hồi:", error);
+                            }
+                        } else {
+                            console.error("Lỗi khi thêm bình luận:", xhr.responseText);
+                            alert("Không thể thêm bình luận. Vui lòng thử lại sau.");
+                        }
+                    }
+                };
+
+                xhr.send(JSON.stringify(commentData));
+            }
+        }
+
+        function createCommentElement(comment) {
+            const commentItem = document.createElement('div');
+            commentItem.className = 'fb-comment-item';
+
+            const commentDate = comment.createdAt ? new Date(comment.createdAt) : new Date();
+            const formattedDate = commentDate.toLocaleString();
+
+            commentItem.innerHTML = `
+                <div class="comment-avatar">
+                    <img src="~/img/avatar.jpg" alt="avatar" class="comment-user-avatar">
+                </div>
+                <div class="fb-comment-content">
+                    <div class="fb-comment-author">${comment.userName || 'User'}</div>
+                    <div class="fb-comment-text">${comment.content}</div>
+                    <div class="fb-comment-time">${formattedDate}</div>
+                    <div class="fb-comment-actions">
+                        <span class="fb-comment-action">Like</span>
+                        <span class="fb-comment-action">Reply</span>
+                    </div>
+                </div>
+            `;
+
+            return commentItem;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load all comment counts when page loads
+            loadAllCommentCounts();
+
+            // Handle Enter key for comments
+            document.querySelectorAll('.fb-comment-input').forEach(input => {
+                input.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        submitComment({target: this.closest('.fb-comment-input-wrapper').querySelector('.fa-paper-plane')});
+                    }
+                });
+            });
+
+            // Close comment overlay when clicked outside
+            document.addEventListener('click', function(event) {
+                const commentOverlay = document.getElementById('comment-overlay');
+                if (commentOverlay.style.display === 'flex' &&
+                    !event.target.closest('.comment-container') &&
+                    !event.target.closest('.comment-btn')) {
+                    closeCommentSection();
+                }
+            });
+
+            // Initialize audio players
+            const customPlayers = document.querySelectorAll('.custom-audio-player');
+
+            customPlayers.forEach(player => {
+                const songUrl = player.getAttribute('data-song-url');
+                const playBtn = player.querySelector('.play-button');
+                const playIcon = player.querySelector('.play-button i');
+                const progressContainer = player.querySelector('.progress-container');
+                const progressBar = player.querySelector('.progress-bar');
+                const timeDisplay = player.querySelector('.time-display');
+                const audio = player.querySelector('audio');
+
+                function formatTime(seconds) {
+                    const minutes = Math.floor(seconds / 60);
+                    const secs = Math.floor(seconds % 60);
+                    return `${minutes}:${secs < 10 ? '0' + secs : secs}`;
+                }
+
+                audio.addEventListener('timeupdate', function() {
+                    const progress = (audio.currentTime / audio.duration) * 100;
+                    progressBar.style.width = `${progress}%`;
+                    timeDisplay.textContent = formatTime(audio.currentTime);
+                });
+
+                audio.addEventListener('loadedmetadata', function() {
+                    timeDisplay.textContent = formatTime(audio.duration);
+                });
+
+                playBtn.addEventListener('click', function() {
+                    if (audio.paused) {
+                        document.querySelectorAll('audio').forEach(a => {
+                            if (a !== audio && !a.paused) {
+                                a.pause();
+
+                                const otherPlayer = a.closest('.custom-audio-player');
+                                if (otherPlayer) {
+                                    const otherIcon = otherPlayer.querySelector('.play-button i');
+                                    otherIcon.classList.remove('fa-pause');
+                                        otherIcon.classList.add('fa-play');
+                                }
+                            }
+                        });
+
+                        audio.play();
+                        playIcon.classList.remove('fa-play');
+                        playIcon.classList.add('fa-pause');
+                    } else {
+                        audio.pause();
+                        playIcon.classList.remove('fa-pause');
+                        playIcon.classList.add('fa-play');
+                    }
+                });
+
+                // Click on progress bar to seek
+                progressContainer.addEventListener('click', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const clickPosition = (e.clientX - rect.left) / rect.width;
+                    audio.currentTime = clickPosition * audio.duration;
+                });
+
+                // Reset when audio ends
+                audio.addEventListener('ended', function() {
+                    audio.currentTime = 0;
+                    playIcon.classList.remove('fa-pause');
+                    playIcon.classList.add('fa-play');
+                });
+            });
+
+            // Volume slider functionality
+            document.querySelectorAll(".volume-slider").forEach(slider => {
+                slider.addEventListener("input", function () {
+                    let songId = this.id.replace("volume-slider-", ""); // Lấy ID bài hát từ thanh trượt
+                    let audio = document.getElementById(`audio-${songId}`);
+                    if (audio) {
+                        audio.volume = this.value;
+                    }
+                });
+            });
+        });
     </script>
-
-    <style>
-        .avatar-container {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-            left: 230px;
-            img
-        {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 2px solid #fff;
-        }
-        }
-
-
-        .profile-menu {
-            display: none;
-            position: absolute;
-            top: 50px;
-            right: 0;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            min-width: 120px;
-        }
-
-            .profile-menu a {
-                display: block;
-                padding: 8px;
-                text-decoration: none;
-                color: black;
-            }
-
-            .profile-menu.show {
-                display: block;
-            }
-
-    </style>
-</body>
-</html>
+    </body>
+    </html>

@@ -1,9 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MusicWeb.Models
 {
     public class User
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]
@@ -18,5 +21,17 @@ namespace MusicWeb.Models
         public string Role { get; set; } // Listener, Uploader, VIP
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+        [StringLength(500)]
+        public string Bio { get; set; }
+
+        public virtual ICollection<Song> Songs { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
+        public virtual ICollection<Like> Likes { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
+
+        public virtual ICollection<Follow> Following { get; set; }
+
+        public virtual ICollection<Follow> Followers { get; set; }
     }
 }

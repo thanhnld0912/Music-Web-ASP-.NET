@@ -1,4 +1,4 @@
-
+﻿
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 * {
@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #f6f5f7;
+    background-color: #1a1a1a; /* Màu nền tối */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,8 +90,10 @@ input {
 }
 
 .container {
+    background: rgba(0, 0, 0, 0.8); /* Làm nền form tối hơn */
     background-color: #fff;
     border-radius: 10px;
+    padding: 20px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     position: relative;
     overflow: hidden;
@@ -142,6 +144,50 @@ input {
         z-index: 5;
     }
 }
+
+/* Định dạng nút quay lại */
+.back-buttons {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+    /* Nút quay lại */
+    .back-buttons a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 10px 15px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
+        overflow: hidden;
+        position: relative;
+    }
+
+        /* Biểu tượng mũi tên */
+        .back-buttons a i {
+            font-size: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hiệu ứng hover: Mũi tên di chuyển */
+        .back-buttons a:hover {
+            background: rgba(255, 255, 255, 0.4);
+            padding-left: 20px;
+        }
+
+            .back-buttons a:hover i {
+                transform: translateX(5px);
+            }
 
 .overlay-container {
     position: absolute;

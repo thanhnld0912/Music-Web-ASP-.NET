@@ -1,371 +1,383 @@
 {
   "Files": [
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MusicWeb.bundle.scp.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MusicWeb.bundle.scp.css",
       "PackagePath": "staticwebassets\\MusicWeb.zl2571n85g.bundle.scp.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\css\\ProfileUser.css",
-      "PackagePath": "staticwebassets\\css\\ProfileUser.css"
-    },
-    {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\css\\loader.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\loader.css",
       "PackagePath": "staticwebassets\\css\\loader.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\css\\login.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\css\\newfeed.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\newfeed.css",
       "PackagePath": "staticwebassets\\css\\newfeed.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\css\\profile.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\profile.css",
       "PackagePath": "staticwebassets\\css\\profile.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\css\\site.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\profileuser.css",
+      "PackagePath": "staticwebassets\\css\\profileuser.css"
+    },
+    {
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\css\\style-carousel.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\style-carousel.css",
       "PackagePath": "staticwebassets\\css\\style-carousel.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\css\\upload.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\upload.css",
       "PackagePath": "staticwebassets\\css\\upload.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\favicon.ico",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\img\\Image1.jpg",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\Image1.jpg",
       "PackagePath": "staticwebassets\\img\\Image1.jpg"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\img\\Image2.jpg",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\Image2.jpg",
       "PackagePath": "staticwebassets\\img\\Image2.jpg"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\img\\Image3.jpg",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\Image3.jpg",
       "PackagePath": "staticwebassets\\img\\Image3.jpg"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\img\\avatar.jpg",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\admin.jpg",
+      "PackagePath": "staticwebassets\\img\\admin.jpg"
+    },
+    {
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\avatar.jpg",
       "PackagePath": "staticwebassets\\img\\avatar.jpg"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\img\\background.png",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\background.png",
       "PackagePath": "staticwebassets\\img\\background.png"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\img\\lgo.png",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\lgo.png",
       "PackagePath": "staticwebassets\\img\\lgo.png"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\js\\layout.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\Login.js",
+      "PackagePath": "staticwebassets\\js\\Login.js"
+    },
+    {
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\NewFeed.js",
+      "PackagePath": "staticwebassets\\js\\NewFeed.js"
+    },
+    {
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\layout.js",
       "PackagePath": "staticwebassets\\js\\layout.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\js\\site.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_2be237d5f9d642ce9565ed432ee0f9fd.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_2be237d5f9d642ce9565ed432ee0f9fd.mp3",
       "PackagePath": "staticwebassets\\uploads\\HEHE-BOY-ORIGINAL-MEME_2be237d5f9d642ce9565ed432ee0f9fd.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_2f816bc8b93d4051993ff6a28f58cf7c.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_2f816bc8b93d4051993ff6a28f58cf7c.mp3",
       "PackagePath": "staticwebassets\\uploads\\HEHE-BOY-ORIGINAL-MEME_2f816bc8b93d4051993ff6a28f58cf7c.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_4703d8143188401b846615c7533cf4ea.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_4703d8143188401b846615c7533cf4ea.mp3",
       "PackagePath": "staticwebassets\\uploads\\HEHE-BOY-ORIGINAL-MEME_4703d8143188401b846615c7533cf4ea.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_4e86eb50ac3142fbb8d62c3d0e5c999d.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_4e86eb50ac3142fbb8d62c3d0e5c999d.mp3",
       "PackagePath": "staticwebassets\\uploads\\HEHE-BOY-ORIGINAL-MEME_4e86eb50ac3142fbb8d62c3d0e5c999d.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_61da48cc906f4fd49b1dce06f9eff75d.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_61da48cc906f4fd49b1dce06f9eff75d.mp3",
       "PackagePath": "staticwebassets\\uploads\\HEHE-BOY-ORIGINAL-MEME_61da48cc906f4fd49b1dce06f9eff75d.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_692b9212f8db4ffb821788914912ea12.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_692b9212f8db4ffb821788914912ea12.mp3",
       "PackagePath": "staticwebassets\\uploads\\HEHE-BOY-ORIGINAL-MEME_692b9212f8db4ffb821788914912ea12.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_73d2575e641740baa3c990c34d74223f.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_73d2575e641740baa3c990c34d74223f.mp3",
       "PackagePath": "staticwebassets\\uploads\\HEHE-BOY-ORIGINAL-MEME_73d2575e641740baa3c990c34d74223f.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_a78d45b575444842a0046bb5977ffb6e.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_a78d45b575444842a0046bb5977ffb6e.mp3",
       "PackagePath": "staticwebassets\\uploads\\HEHE-BOY-ORIGINAL-MEME_a78d45b575444842a0046bb5977ffb6e.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_ab0aa503978641478b50a034c3c3a7bc.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_ab0aa503978641478b50a034c3c3a7bc.mp3",
       "PackagePath": "staticwebassets\\uploads\\HEHE-BOY-ORIGINAL-MEME_ab0aa503978641478b50a034c3c3a7bc.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_b9d0abb5ea0d460c8f9af80ea272fbb9.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_b9d0abb5ea0d460c8f9af80ea272fbb9.mp3",
       "PackagePath": "staticwebassets\\uploads\\HEHE-BOY-ORIGINAL-MEME_b9d0abb5ea0d460c8f9af80ea272fbb9.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_d2b64cdd2c164dd0b1e99b2bf5139844.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_d2b64cdd2c164dd0b1e99b2bf5139844.mp3",
       "PackagePath": "staticwebassets\\uploads\\HEHE-BOY-ORIGINAL-MEME_d2b64cdd2c164dd0b1e99b2bf5139844.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_d557082a52ff4c36abccafcb97b943c6.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_d557082a52ff4c36abccafcb97b943c6.mp3",
       "PackagePath": "staticwebassets\\uploads\\HEHE-BOY-ORIGINAL-MEME_d557082a52ff4c36abccafcb97b943c6.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_ec1ce71eb58f428b914a3e7673db4aff.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_ec1ce71eb58f428b914a3e7673db4aff.mp3",
       "PackagePath": "staticwebassets\\uploads\\HEHE-BOY-ORIGINAL-MEME_ec1ce71eb58f428b914a3e7673db4aff.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\Why-are-you-running__5bbc0eec4d90437ea6c1dd660c0353b7.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\Why-are-you-running__5bbc0eec4d90437ea6c1dd660c0353b7.mp3",
       "PackagePath": "staticwebassets\\uploads\\Why-are-you-running__5bbc0eec4d90437ea6c1dd660c0353b7.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\Why-are-you-running__5bbc0eec4d90437ea6c1dd660c0353b7_2bb2b71c1b9f4043ab3933b904e5d77b.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\Why-are-you-running__5bbc0eec4d90437ea6c1dd660c0353b7_2bb2b71c1b9f4043ab3933b904e5d77b.mp3",
       "PackagePath": "staticwebassets\\uploads\\Why-are-you-running__5bbc0eec4d90437ea6c1dd660c0353b7_2bb2b71c1b9f4043ab3933b904e5d77b.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\Why-are-you-running__5bbc0eec4d90437ea6c1dd660c0353b7_fa6329e201dd4754b45633c3d7abf637.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\Why-are-you-running__5bbc0eec4d90437ea6c1dd660c0353b7_fa6329e201dd4754b45633c3d7abf637.mp3",
       "PackagePath": "staticwebassets\\uploads\\Why-are-you-running__5bbc0eec4d90437ea6c1dd660c0353b7_fa6329e201dd4754b45633c3d7abf637.mp3"
     },
     {
-      "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\Why-are-you-running__7f382526449145bbb40373493c61aa7b.mp3",
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\Why-are-you-running__7f382526449145bbb40373493c61aa7b.mp3",
       "PackagePath": "staticwebassets\\uploads\\Why-are-you-running__7f382526449145bbb40373493c61aa7b.mp3"
     },
     {

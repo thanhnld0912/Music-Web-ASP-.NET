@@ -2,11 +2,12 @@ wwwroot\css\loader.css
 wwwroot\css\login.css
 wwwroot\css\newfeed.css
 wwwroot\css\profile.css
-wwwroot\css\ProfileUser.css
+wwwroot\css\profileuser.css
 wwwroot\css\site.css
 wwwroot\css\style-carousel.css
 wwwroot\css\upload.css
 wwwroot\favicon.ico
+wwwroot\img\admin.jpg
 wwwroot\img\avatar.jpg
 wwwroot\img\background.png
 wwwroot\img\Image1.jpg
@@ -14,6 +15,8 @@ wwwroot\img\Image2.jpg
 wwwroot\img\Image3.jpg
 wwwroot\img\lgo.png
 wwwroot\js\layout.js
+wwwroot\js\Login.js
+wwwroot\js\NewFeed.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

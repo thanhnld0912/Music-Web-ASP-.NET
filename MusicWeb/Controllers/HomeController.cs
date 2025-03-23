@@ -40,6 +40,20 @@ namespace MusicWebApp.Controllers
 
             return View(posts);
         }
+        public async Task<IActionResult> NewFeedAdmin()
+        {
+            var posts = await _context.Posts
+                .Include(p => p.User)
+                .Include(p => p.Songs)
+                .Include(p => p.Likes)
+                .Include(p => p.Dislikes)
+                .Include(p => p.Comments)
+                .OrderByDescending(p => p.CreatedAt)
+                .ToListAsync();
+
+            return View(posts);  // Truyền dữ liệu posts vào View
+        }
+
 
         public IActionResult Index()
         {

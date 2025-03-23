@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using MusicWeb.Data;
 using MusicWeb.Models;
-using System.Linq;
+
 namespace MusicWeb.Controllers
 {
     public class AccountController : Controller
@@ -13,6 +11,7 @@ namespace MusicWeb.Controllers
         {
             _context = context;
         }
+
         public IActionResult Profile()
         {
             return View();
@@ -24,7 +23,7 @@ namespace MusicWeb.Controllers
             return View();
         }
 
-        //Create admin because admin not exist
+        // Create admin if it does not exist
         private void CreateAdminIfNotExist()
         {
             if (!_context.Users.Any(u => u.Email == "admin@musicweb.com"))
@@ -34,10 +33,20 @@ namespace MusicWeb.Controllers
                     Username = "Admin",
                     Email = "admin@musicweb.com",
                     Password = "admin123", // Lưu ý: Cần mã hóa mật khẩu trong thực tế
-                    Role = "Admin"
+                    Role = "Admin",
+                    Bio = "No content"  // Cung cấp giá trị mặc định cho trường Bio
                 };
                 _context.Users.Add(admin);
                 _context.SaveChanges();
+
+                // Automatically log in the admin after creation
+                var user = _context.Users.FirstOrDefault(u => u.Email == "admin@musicweb.com");
+                if (user != null)
+                {
+                    HttpContext.Session.SetString("UserId", user.Id.ToString());
+                    HttpContext.Session.SetString("UserRole", user.Role);
+                    HttpContext.Session.SetString("Username", user.Username);
+                }
             }
         }
 
@@ -46,6 +55,7 @@ namespace MusicWeb.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult Login(string email, string password)
         {
@@ -58,14 +68,23 @@ namespace MusicWeb.Controllers
                 HttpContext.Session.SetString("UserRole", user.Role);
                 HttpContext.Session.SetString("Username", user.Username);
 
-                // Chuyển hướng đến trang Loader sau khi đăng nhập thành công
-                return RedirectToAction("Loader", "Account");
+                // Kiểm tra nếu người dùng là admin và chuyển hướng đến newfeedadmin
+                if (user.Email == "admin@musicweb.com")
+                {
+                    // Điều hướng đến trang newfeedadmin
+                    return RedirectToAction("NewFeedAdmin", "Home");
+                }
+
+                // Nếu không phải admin, điều hướng đến trang newfeed
+                return RedirectToAction("NewFeed", "Home");
             }
 
             // Đăng nhập thất bại
             ViewBag.Error = "Invalid email or password.";
             return View();
         }
+
+
 
         public IActionResult Logout()
         {
@@ -87,7 +106,7 @@ namespace MusicWeb.Controllers
                 return View("Login");
             }
 
-            var newUser = new User { Username = name, Email = email, Password = password, Role = "User" , Bio = "No content"};
+            var newUser = new User { Username = name, Email = email, Password = password, Role = "User" };
             _context.Users.Add(newUser);
             _context.SaveChanges();
 
@@ -96,3 +115,4 @@ namespace MusicWeb.Controllers
     }
 
 }
+

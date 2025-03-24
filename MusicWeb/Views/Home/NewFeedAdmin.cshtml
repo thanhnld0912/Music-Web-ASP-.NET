@@ -1,13 +1,11 @@
     @{
         Layout = null;
-        ViewData["Title"] = "NewFeed";
+        ViewData["Title"] = "NewFeed - Admin";
         var isAuthenticated = Context.Session.GetString("UserId") != null;
         var userId = Context.Session.GetString("UserId");
-        var avatarUrl = Context.Session.GetString("AvatarUrl") ?? "~/img/avatar.jpg";
+        var avatarUrl = Context.Session.GetString("AvatarUrl") ?? "~/img/admin.jpg";
         @model List<MusicWeb.Models.Post>
-
     }
-
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -44,33 +42,23 @@
         </div>
 
         <!-- Chat Boxes -->
-    <div class="chat-box" id="playlistBox">
-        <h3>Create Playlist</h3>
-        @if (isAuthenticated)
-        {
-            <input type="text" placeholder="Enter playlist name" />
-            <button class="message-login-button">Create</button>
-        }
-        else
-        {
-            <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
-        }
-    </div>
+        <div class="chat-box" id="playlistBox">
+            <h3>Create Playlist</h3>
+            @if (isAuthenticated)
+            {
+                <input type="text" placeholder="Enter playlist name" />
+                <button class="message-login-button">Create</button>
+            }
+        </div>
 
-
-    <div class="chat-box" id="storyBox">
-        <h3>Share Your Story</h3>
-        @if (isAuthenticated)
-        {
-            <textarea placeholder="Write your story..."></textarea>
-            <button class="message-login-button">Post</button>
-        }
-        else
-        {
-            <button onclick="location.href='@Url.Action("Login", "Account")'" class="message-login-button">Login</button>
-        }
-    </div>
-
+        <div class="chat-box" id="storyBox">
+            <h3>Share Your Story</h3>
+            @if (isAuthenticated)
+            {
+                <textarea placeholder="Write your story..."></textarea>
+                <button class="message-login-button">Post</button>
+            }
+        </div>
 
         <!-- Main Content Area -->
         <div class="content-wrapper">
@@ -85,12 +73,11 @@
                         @if (isAuthenticated)
                         {
                             <a href="@Url.Action("Profile", "Account")" class="avatar-container">
-                                <img src="~/img/avatar.jpg" alt="Avatar" class="user-avatar">
+                                <img src="/img/admin.jpg" alt="Avatar" class="user-avatar">
                             </a>
-                        }
-                        else
-                        {
-                            <button class="auth-button login" onclick="location.href='@Url.Action("Login", "Account")'">Login</button>
+                            <div class=" = auth-button">
+                            <button class="manage-button" onclick="location.href='@Url.Action("Manage", "Account")'">Manage</button>
+                        </div>
                         }
                     </div>
                 </div>
@@ -100,10 +87,10 @@
             <div class="main-content">
                
                 <div class="filter-tabs">
-                    <button class="filter-tab active">Tất cả</button>
-                    <button class="filter-tab">Bài viết</button>
-                    <button class="filter-tab">Nhạc Cover</button>
-                    <button class="filter-tab">Nhạc mới sáng tác</button>
+                    <button class="filter-tab active">All</button>
+                    <button class="filter-tab">Posts</button>
+                    <button class="filter-tab">Cover</button>
+                    <button class="filter-tab">Self Instrumented</button>
 
                 @if (isAuthenticated)
                 {
@@ -116,7 +103,8 @@
 
             <div class="post-topuser">
                 <div class="post-topuser-left">
-                    @if (!Model.Any())
+                    @if (Model == null || !Model.Any())
+
                     {
                         <p>No posts available.</p>
                     }
@@ -261,19 +249,6 @@
                             <div class="artist-desc">Description</div>
                         </div>
                     </div>
-
-                    <div class="time-section">
-                        <div class="time-label">Time</div>
-                        <div class="time-slider">
-                            <div class="time-progress"></div>
-                        </div>
-                        <div class="time-remaining">30 days left</div>
-                    </div>
-
-                    <div class="logo-section">
-                        <div class="logo">M</div>
-                        <div>Melofy VIP Member</div>
-                    </div>
                 </div>
                 
             </div>
@@ -283,7 +258,7 @@
 
      
         </div>
-        </div>
+
 
         <!-- Separated Comment Section - This will be displayed as an overlay -->
         <div id="comment-overlay" class="comment-overlay">
@@ -314,6 +289,6 @@
                 </div>
             </div>
         </div>
-    <script src="~/js/NewFeed.js" dever></script>
+    <script src = "~/js/NewFeed.js"></script>
     </body>
     </html>

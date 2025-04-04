@@ -15,42 +15,44 @@
             }
 
 
-            // This method now handles viewing any user's profile
-            public async Task<IActionResult> Profile(int id)
+        // This method now handles viewing any user's profile
+        public async Task<IActionResult> Profile(int id)
+        {
+            // Kiểm tra xem người dùng có đang đăng nhập và có quyền xem hồ sơ của người khác không
+            int currentUserId = 0;
+            if (int.TryParse(HttpContext.Session.GetString("UserId"), out currentUserId) && currentUserId == id)
             {
-                // Check if we're trying to view our own profile
-                int currentUserId = 0;
-                if (int.TryParse(HttpContext.Session.GetString("UserId"), out currentUserId) && currentUserId == id)
-                {
-                    // Redirect to the user's own profile page
-                    return RedirectToAction("Profile", "Account");
-                }
-
-                // Otherwise, show the requested user's profile
-                var user = await _context.Users
-                    .Include(u => u.Posts)
-                        .ThenInclude(p => p.Songs)
-                    .FirstOrDefaultAsync(u => u.Id == id);
-
-                if (user == null)
-                {
-                    return NotFound();
-                }
-
-                // Check if current user is following this profile
-                bool isFollowing = false;
-                if (currentUserId > 0)
-                {
-                    isFollowing = await _context.Follows
-                        .AnyAsync(f => f.FollowerId == currentUserId && f.FollowingId == id);
-                }
-
-                ViewBag.IsFollowing = isFollowing;
-                return View(user);
+                // Nếu người dùng đang xem chính hồ sơ của mình, chuyển hướng tới trang profile của tài khoản
+                return RedirectToAction("Profile", "Account");
             }
 
-            // Follow/Unfollow methods remain the same
-            [HttpPost]
+            // Lấy thông tin người dùng từ cơ sở dữ liệu
+            var user = await _context.Users
+                .Include(u => u.Posts)
+                    .ThenInclude(p => p.Songs)
+                .FirstOrDefaultAsync(u => u.Id == id);
+
+            // Nếu không tìm thấy người dùng, trả về NotFound
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            // Kiểm tra xem người dùng hiện tại có đang theo dõi người dùng này không
+            bool isFollowing = false;
+            if (currentUserId > 0)
+            {
+                isFollowing = await _context.Follows
+                    .AnyAsync(f => f.FollowerId == currentUserId && f.FollowingId == id);
+            }
+
+            ViewBag.IsFollowing = isFollowing;
+            return View(user);
+        }
+
+
+        // Follow/Unfollow methods remain the same
+        [HttpPost]
             public async Task<IActionResult> Follow(int followingId)
             {
                 // Existing code remains unchanged

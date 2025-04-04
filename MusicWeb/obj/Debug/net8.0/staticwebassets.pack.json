@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\1.gif",
+      "PackagePath": "staticwebassets\\img\\1.gif"
+    },
+    {
       "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\Image1.jpg",
       "PackagePath": "staticwebassets\\img\\Image1.jpg"
     },
@@ -65,6 +69,10 @@
       "PackagePath": "staticwebassets\\img\\background.png"
     },
     {
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\download.gif",
+      "PackagePath": "staticwebassets\\img\\download.gif"
+    },
+    {
       "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\lgo.png",
       "PackagePath": "staticwebassets\\img\\lgo.png"
     },
@@ -75,6 +83,10 @@
     {
       "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\NewFeed.js",
       "PackagePath": "staticwebassets\\js\\NewFeed.js"
+    },
+    {
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\Profile.js",
+      "PackagePath": "staticwebassets\\js\\Profile.js"
     },
     {
       "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\layout.js",
@@ -379,6 +391,10 @@
     {
       "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\Why-are-you-running__7f382526449145bbb40373493c61aa7b.mp3",
       "PackagePath": "staticwebassets\\uploads\\Why-are-you-running__7f382526449145bbb40373493c61aa7b.mp3"
+    },
+    {
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3",
+      "PackagePath": "staticwebassets\\uploads\\buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MusicWeb.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

@@ -22,6 +22,7 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+
 // Thêm HttpContextAccessor để truy cập Session từ view
 builder.Services.AddHttpContextAccessor();
 
@@ -64,6 +65,7 @@ using (var scope = app.Services.CreateScope())
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+);
 
 app.Run();

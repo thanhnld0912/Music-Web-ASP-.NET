@@ -16,7 +16,8 @@ body {
     background-color: black;
     color: #fff;
     overflow: hidden;
-    background-image : url(../img/background.png);
+
+
 }
 
 /* Sidebar */
@@ -42,7 +43,6 @@ body {
         font-size: 15px;
         font-weight: bold;
         text-align: center;
-        margin-bottom: 30px;
         margin-top: 20px;
     }
 
@@ -87,12 +87,32 @@ body {
     margin-top: 10px;
     transition: background 0.3s;
     font-weight: bold;
+    margin-bottom : 10px;
+}
+.create-playlist {
+    padding: 0 10px;
+    background-color: #333;
+    color: white;
+    border: solid 2px white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.3s;
+    font-weight: bold;
+    margin-bottom: 40px;
+    position: relative;
+    left: 27%;
+    top: 20px;
 }
 
     .sidebar-button:hover {
         background-color: #387ABB;
         color: white;
     }
+.create-playlist:hover {
+    background-color: #387ABB;
+    color: white;
+}
 
 /* Danh sách nghệ sĩ */
 .artist-list {
@@ -245,10 +265,11 @@ body {
     gap: 10px;
     margin-bottom: 20px;
     width : 70%;
+    justify-content : center;
 }
 
 .filter-tab {
-    padding: 8px 15px;
+    padding: 8px 50px;
     border-radius: 10px;
     border: none;
     background-color: #363636;
@@ -260,7 +281,7 @@ body {
 }
 
     .filter-tab.active {
-        background-color: #387ABB;
+        background-color: #bc04f4;
         color: white;
     }
 
@@ -269,7 +290,7 @@ body {
     position: fixed;
     bottom: 540px;
     right: 400px;
-    background-color: #1DB954;
+    background-color: #bc04f4;
     border: none;
     width: 50px;
     height: 50px;
@@ -278,10 +299,10 @@ body {
     color: white;
     cursor: pointer;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    display : flex;
-    align-items : center;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    font-size : 25px;
+    font-size: 25px;
 }
 
 /* Post */
@@ -391,8 +412,21 @@ body {
             margin-left : 68px;
                }
 }
-.song-container{
-    display : flex;
+.song-container {
+    display: flex;
+    
+}
+.song-item span {
+    padding: 8px;
+    transition: transform 0.3s ease;
+    cursor : pointer;
+}
+.song-item span:hover {
+  
+    transform: scale(1.05);
+    background-color: #444;
+   border-radius : 10px;
+
 }
 
 /* Nút hành động */
@@ -434,7 +468,7 @@ body {
     /* Hide elements when sidebar is collapsed */
     .sidebar.collapsed .logo {
         font-size: 16px;
-        margin-bottom: 30px;
+ 
     }
 
 s
@@ -499,6 +533,7 @@ s
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index : 1000;
 }
 
 .post-menu {
@@ -866,28 +901,29 @@ s
     display: flex;
     align-items: center;
     background-color: rgba(0,0,0,0);
-    border-radius: 25px;
-    padding: 8px 0;
+    border-radius: 10px;
+    padding: 8px;
     width: 100%;
     max-width: 500px;
     color: white;
     font-family: Arial, sans-serif;
+
 }
 
-.play-button {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    margin-right: 10px;
-    flex-shrink: 0;
-    padding : 0;
-    
-}
+
+    .play-button {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 10px;
+        flex-shrink: 0;
+        padding: 0;
+    }
 
     .play-button i {
         color: #3f3d56;
@@ -1097,3 +1133,280 @@ s
             padding: 15px 10px;
             background-color: #333;
         }
+
+.melody-collection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width : 100%;
+}
+
+.playlist-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+}
+
+    .playlist-link:hover .melody-card {
+        background-color: #666; /* Slightly lighter background on hover */
+        transition: background-color 0.3s ease;
+    }
+
+/* Keep the existing melody card styling */
+.melody-card {
+    background-color: #444;
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom : 10px;
+}
+
+.melody-image {
+    width: 50px;
+    height: 50px;
+    background-color: #555;
+    border-radius: 5px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.melody-info {
+    flex-grow: 1;
+}
+
+.melody-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.melody-creator {
+    font-size: 12px;
+    color: #999;
+}
+
+.home-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #181818; /* Nền mặc định */
+    color: #b3b3b3; /* Màu icon mặc định */
+    font-size: 24px;
+    transition: background 0.3s, color 0.3s;
+}
+.inactive {
+    opacity: 0.5;
+}
+.active {
+    color : white;
+}
+
+/*Menu edit delete post*/
+.post-options {
+    position: relative;
+    margin-left: auto;
+}
+
+.options-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #65676b;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+    .options-btn:hover {
+        background-color: #f0f2f5;
+    }
+
+.post-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    width: 150px;
+}
+
+.menu-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+    .menu-item:hover {
+        background-color: #bc04f4;
+        border-radius: 5px;
+    }
+
+/* Edit overlay styles */
+.edit-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+.confirm-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    
+}
+
+.edit-container {
+    background-color: white;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 2px 26px rgba(0, 0, 0, 0.3);
+}
+.confirm-container {
+    background-color: white;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 2px 26px rgba(0, 0, 0, 0.3);
+    position : absolute;
+    top : 30%;
+    left : 30%;
+}
+
+.edit-header, .confirm-header {
+    padding: 15px;
+    border-bottom: 1px solid #dadde1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color : black;
+}
+
+.close-edit-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #65676b;
+}
+
+.edit-form {
+    padding: 15px;
+}
+
+#edit-post-content {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+.edit-form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+    .edit-form-buttons button {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+.save-edit-btn {
+    background-color: #1877f2;
+    color: white;
+}
+
+/* Image preview styles */
+#edit-image-preview-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+#edit-image-preview {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+}
+
+.remove-image-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Confirm dialog styles */
+.confirm-body {
+    padding: 20px 15px;
+}
+.confirm-body  p{
+    color : black;
+}
+
+.confirm-footer {
+    padding: 15px;
+    border-top: 1px solid #dadde1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+    .confirm-footer button {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+.cancel-btn {
+    background-color: #e4e6eb;
+}
+
+.delete-btn {
+    background-color: #ed4956;
+    color: white;
+}
+
+
+
+
+

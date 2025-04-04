@@ -1088,3 +1088,204 @@ input {
     margin-bottom : 20px;
     border-radius : 10px;
 }
+
+
+
+/*Menu edit delete post*/
+.post-options {
+    position: relative;
+    margin-left: auto;
+}
+
+.options-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #65676b;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+    .options-btn:hover {
+        background-color: #f0f2f5;
+    }
+
+.post-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    width: 150px;
+}
+
+.menu-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+    .menu-item:hover {
+        background-color: #444;
+        border-radius: 5px;
+    }
+
+/* Edit overlay styles */
+.edit-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+}
+
+.edit-container {
+    background-color: white;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 2px 26px rgba(0, 0, 0, 0.3);
+}
+
+.confirm-container {
+    background-color: white;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 2px 26px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.edit-header, .confirm-header {
+    padding: 15px;
+    border-bottom: 1px solid #dadde1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.close-edit-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #65676b;
+}
+
+.edit-form {
+    padding: 15px;
+}
+
+#edit-post-content {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+.edit-form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+    .edit-form-buttons button {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+.save-edit-btn {
+    background-color: #1877f2;
+    color: white;
+}
+
+/* Image preview styles */
+#edit-image-preview-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+#edit-image-preview {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+}
+
+.remove-image-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Confirm dialog styles */
+.confirm-body {
+    padding: 20px 15px;
+}
+
+    .confirm-body p {
+        color: black;
+    }
+
+.confirm-footer {
+    padding: 15px;
+    border-top: 1px solid #dadde1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+    .confirm-footer button {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+.cancel-btn {
+    background-color: #e4e6eb;
+}
+
+.delete-btn {
+    background-color: #ed4956;
+    color: white;
+}

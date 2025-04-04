@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MusicWeb.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250321085941_InitialCreate")]
+    [Migration("20250331073933_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

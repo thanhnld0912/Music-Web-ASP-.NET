@@ -294,7 +294,18 @@ body {
     }
 
 
+.info-box {
+    position: relative;
+}
 
-
+.password-toggle-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
 
 

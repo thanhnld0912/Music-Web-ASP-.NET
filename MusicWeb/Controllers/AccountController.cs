@@ -14,42 +14,102 @@ namespace MusicWeb.Controllers
 
         public IActionResult Profile()
         {
-            return View();
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Login");
+            }
+
+            var user = _context.Users.FirstOrDefault(u => u.Id.ToString() == userId);
+            if (user == null)
+            {
+                return RedirectToAction("Login");
+            }
+
+            // Truyền đối tượng người dùng vào View
+            return View(user);
         }
+        public IActionResult ProfileAdmin()
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Login");
+            }
+
+            var user = _context.Users.FirstOrDefault(u => u.Id.ToString() == userId);
+            if (user == null)
+            {
+                return RedirectToAction("Login");
+            }
+
+            return View(user);
+        }
+        public IActionResult GetPassword()
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Json(new { success = false, message = "User not authenticated" });
+            }
+
+            var user = _context.Users.FirstOrDefault(u => u.Id.ToString() == userId);
+            if (user == null)
+            {
+                return Json(new { success = false, message = "User not found" });
+            }
+
+            // Không trả về mật khẩu thực tế, mà chỉ cần trả lại mật khẩu thực tế
+            var password = user.Password;  // Đây là mật khẩu đã mã hóa (nếu cần)
+
+            return Json(new { success = true, password = password });
+        }
+
+
+        [HttpPost]
+        public IActionResult UpdateProfile([FromBody] User updatedUser)
+        {
+            // Lấy UserId từ session
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Json(new { success = false, message = "User not authenticated" });
+            }
+
+            // Tìm kiếm người dùng trong cơ sở dữ liệu
+            var user = _context.Users.FirstOrDefault(u => u.Id.ToString() == userId);
+            if (user == null)
+            {
+                return Json(new { success = false, message = "User not found" });
+            }
+
+            // Cập nhật thông tin người dùng
+            user.Username = updatedUser.Username;
+            user.Email = updatedUser.Email;
+            user.Bio = updatedUser.Bio;
+
+            // Cập nhật mật khẩu nếu có
+            if (!string.IsNullOrEmpty(updatedUser.Password))
+            {
+                user.Password = updatedUser.Password;
+            }
+
+            // Lưu thay đổi vào cơ sở dữ liệu
+            _context.SaveChanges();
+
+            // Cập nhật lại thông tin trong session
+            HttpContext.Session.SetString("Username", user.Username);
+            HttpContext.Session.SetString("Email", user.Email);
+            HttpContext.Session.SetString("Bio", user.Bio);
+
+            return Json(new { success = true });
+        }
+
 
         public IActionResult Login()
         {
-            CreateAdminIfNotExist();
             return View();
         }
-
-        // Create admin if it does not exist
-        private void CreateAdminIfNotExist()
-        {
-            if (!_context.Users.Any(u => u.Email == "admin@musicweb.com"))
-            {
-                var admin = new User
-                {
-                    Username = "Admin",
-                    Email = "admin@musicweb.com",
-                    Password = "admin123", // Lưu ý: Cần mã hóa mật khẩu trong thực tế
-                    Role = "Admin",
-                    Bio = "No content"  // Cung cấp giá trị mặc định cho trường Bio
-                };
-                _context.Users.Add(admin);
-                _context.SaveChanges();
-
-                // Automatically log in the admin after creation
-                var user = _context.Users.FirstOrDefault(u => u.Email == "admin@musicweb.com");
-                if (user != null)
-                {
-                    HttpContext.Session.SetString("UserId", user.Id.ToString());
-                    HttpContext.Session.SetString("UserRole", user.Role);
-                    HttpContext.Session.SetString("Username", user.Username);
-                }
-            }
-        }
-
 
         public IActionResult Loader()
         {
@@ -69,7 +129,7 @@ namespace MusicWeb.Controllers
                 HttpContext.Session.SetString("Username", user.Username);
 
                 // Kiểm tra nếu người dùng là admin và chuyển hướng đến newfeedadmin
-                if (user.Email == "admin@musicweb.com")
+                if (user.Email == "admin@example.com")
                 {
                     // Điều hướng đến trang newfeedadmin
                     return RedirectToAction("NewFeedAdmin", "Home");
@@ -96,7 +156,16 @@ namespace MusicWeb.Controllers
         {
             return RedirectToAction("Login", new { register = "true" });
         }
+        public IActionResult Manage()
+        {
+            // Lấy số lượng bài hát từ cơ sở dữ liệu
+            var songCount = _context.Songs.Count();
 
+            // Truyền số lượng bài hát vào View
+            ViewData["SongCount"] = songCount;
+
+            return View();
+        }
         [HttpPost]
         public IActionResult Register(string name, string email, string password)
         {
@@ -106,13 +175,21 @@ namespace MusicWeb.Controllers
                 return View("Login");
             }
 
-            var newUser = new User { Username = name, Email = email, Password = password, Role = "User" };
+            // Đảm bảo Bio có giá trị, có thể là chuỗi rỗng nếu không có thông tin
+            var newUser = new User
+            {
+                Username = name,
+                Email = email,
+                Password = password,
+                Role = "User",
+                Bio = ""  // Giá trị mặc định cho Bio nếu không có thông tin
+            };
+
             _context.Users.Add(newUser);
             _context.SaveChanges();
 
             return RedirectToAction("Login");
         }
     }
-
 }
 

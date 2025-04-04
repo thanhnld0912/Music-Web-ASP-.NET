@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Session;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using MusicWeb.Data;
+using MusicWeb.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,15 +27,40 @@ builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
-// Cấu hình pipeline
+// Môi trường phát triển, hiển thị lỗi chi tiết
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
+
+// Cấu hình các middleware
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-// Sử dụng Session trước Authorization
+// Sử dụng Session
 app.UseSession();
 
+// Thêm Authorization
 app.UseAuthorization();
+
+// Gọi phương thức Seed sau khi database đã được cấu hình
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<ApplicationDbContext>();
+
+    // Tạo database và seed dữ liệu nếu cần
+    context.Database.Migrate();  // Đảm bảo database được tạo ra và cập nhật
+
+    // Gọi phương thức Seed để thêm người dùng admin nếu chưa có
+    ApplicationDbContext.Seed(context);
+}
 
 app.MapControllerRoute(
     name: "default",

@@ -31,6 +31,7 @@ namespace MusicWeb.Models
         public virtual ICollection<Comment> Comments { get; set; }
 
         public virtual ICollection<Follow> Following { get; set; }
+        public virtual ICollection<Playlist> Playlists { get; set; }
 
         public virtual ICollection<Follow> Followers { get; set; }
     }

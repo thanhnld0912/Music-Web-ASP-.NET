@@ -26,11 +26,11 @@
                 return RedirectToAction("Profile", "Account");
             }
 
-            // Lấy thông tin người dùng từ cơ sở dữ liệu
-            var user = await _context.Users
-                .Include(u => u.Posts)
-                    .ThenInclude(p => p.Songs)
-                .FirstOrDefaultAsync(u => u.Id == id);
+                // Otherwise, show the requested user's profile
+                var user = await _context.Users
+                    .Include(u => u.Posts)
+                        .ThenInclude(p => p.Song)
+                    .FirstOrDefaultAsync(u => u.Id == id);
 
             // Nếu không tìm thấy người dùng, trả về NotFound
             if (user == null)

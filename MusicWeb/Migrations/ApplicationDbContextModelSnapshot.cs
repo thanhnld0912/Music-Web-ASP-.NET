@@ -37,7 +37,7 @@ namespace MusicWeb.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("PostId")
+                    b.Property<int>("PostId")
                         .HasColumnType("int");
 
                     b.Property<int?>("SongId")
@@ -145,6 +145,53 @@ namespace MusicWeb.Migrations
                     b.ToTable("Likes");
                 });
 
+            modelBuilder.Entity("MusicWeb.Models.Playlist", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Playlists");
+                });
+
+            modelBuilder.Entity("MusicWeb.Models.PlaylistSong", b =>
+                {
+                    b.Property<int>("PlaylistId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SongId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.HasKey("PlaylistId", "SongId");
+
+                    b.HasIndex("SongId");
+
+                    b.ToTable("PlaylistSongs");
+                });
+
             modelBuilder.Entity("MusicWeb.Models.Post", b =>
                 {
                     b.Property<int>("Id")
@@ -162,6 +209,9 @@ namespace MusicWeb.Migrations
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("SongId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -202,7 +252,7 @@ namespace MusicWeb.Migrations
                     b.Property<string>("Lyrics")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PostId")
+                    b.Property<int>("PostId")
                         .HasColumnType("int");
 
                     b.Property<string>("Status")
@@ -219,11 +269,17 @@ namespace MusicWeb.Migrations
                     b.Property<DateTime>("UploadDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ArtistId");
 
-                    b.HasIndex("PostId");
+                    b.HasIndex("PostId")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Songs");
                 });
@@ -270,7 +326,8 @@ namespace MusicWeb.Migrations
                     b.HasOne("MusicWeb.Models.Post", "Post")
                         .WithMany("Comments")
                         .HasForeignKey("PostId")
-                        .OnDelete(DeleteBehavior.NoAction);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.HasOne("MusicWeb.Models.Song", null)
                         .WithMany("Comments")
@@ -356,6 +413,36 @@ namespace MusicWeb.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("MusicWeb.Models.Playlist", b =>
+                {
+                    b.HasOne("MusicWeb.Models.User", "User")
+                        .WithMany("Playlists")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("MusicWeb.Models.PlaylistSong", b =>
+                {
+                    b.HasOne("MusicWeb.Models.Playlist", "Playlist")
+                        .WithMany("PlaylistSongs")
+                        .HasForeignKey("PlaylistId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("MusicWeb.Models.Song", "Song")
+                        .WithMany("PlaylistSongs")
+                        .HasForeignKey("SongId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Playlist");
+
+                    b.Navigation("Song");
+                });
+
             modelBuilder.Entity("MusicWeb.Models.Post", b =>
                 {
                     b.HasOne("MusicWeb.Models.User", "User")
@@ -370,18 +457,29 @@ namespace MusicWeb.Migrations
             modelBuilder.Entity("MusicWeb.Models.Song", b =>
                 {
                     b.HasOne("MusicWeb.Models.User", "User")
-                        .WithMany("Songs")
+                        .WithMany()
                         .HasForeignKey("ArtistId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("MusicWeb.Models.Post", "Post")
+                        .WithOne("Song")
+                        .HasForeignKey("MusicWeb.Models.Song", "PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MusicWeb.Models.User", null)
                         .WithMany("Songs")
-                        .HasForeignKey("PostId");
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Post");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("MusicWeb.Models.Playlist", b =>
+                {
+                    b.Navigation("PlaylistSongs");
                 });
 
             modelBuilder.Entity("MusicWeb.Models.Post", b =>
@@ -392,7 +490,7 @@ namespace MusicWeb.Migrations
 
                     b.Navigation("Likes");
 
-                    b.Navigation("Songs");
+                    b.Navigation("Song");
                 });
 
             modelBuilder.Entity("MusicWeb.Models.Song", b =>
@@ -402,6 +500,8 @@ namespace MusicWeb.Migrations
                     b.Navigation("Dislikes");
 
                     b.Navigation("Likes");
+
+                    b.Navigation("PlaylistSongs");
                 });
 
             modelBuilder.Entity("MusicWeb.Models.User", b =>
@@ -413,6 +513,8 @@ namespace MusicWeb.Migrations
                     b.Navigation("Following");
 
                     b.Navigation("Likes");
+
+                    b.Navigation("Playlists");
 
                     b.Navigation("Posts");
 

@@ -133,40 +133,37 @@
                                 </div>
 
                                 <!-- Songs -->
-                                @if (post.Songs.Any())
+                                @if (post.Song != null)
                                 {
-                                    <div class="song-list">
-                                        @foreach (var song in post.Songs)
-                                        {
-                                            <div class="song-item">
-                                                <div class="song-info">
-                                                    <div class="song-container">
-                                                        <div class="custom-audio-player" data-song-url="@song.FileUrl">
-                                                            <div class="play-button">
-                                                                <i class="fas fa-play" id="play-icon-@song.Id"></i>
-                                                            </div>
+                                    <div class="song-item">
+                                        <div class="song-info">
+                                            <div class="song-container">
+                                                <div class="custom-audio-player" data-song-url="@post.Song.FileUrl">
+                                                    <div class="play-button">
+                                                        <i class="fas fa-play" id="play-icon-@post.Song.Id"></i>
+                                                    </div>
 
-                                                            <div class="play-progress">
-                                                                <div class="time-display">0:00</div>
-                                                                <div class="progress-container" id="progress-container-@song.Id">
-                                                                    <div class="progress-bar" id="progress-bar-@song.Id"></div>
-                                                                </div>
-                                                            </div>
-
-                                                            <audio id="audio-@song.Id" style="display: none;">
-                                                                <source src="@song.FileUrl" type="audio/mpeg">
-                                                            </audio>
-                                                        </div>
-                                                        <div class="volume-control">
-                                                            <i class="fas fa-volume-up"></i>
-                                                            <input type="range" min="0" max="1" step="0.1" value="1" class="volume-slider" id="volume-slider-@song.Id">
+                                                    <div class="play-progress">
+                                                        <div class="time-display">0:00</div>
+                                                        <div class="progress-container" id="progress-container-@post.Song.Id">
+                                                            <div class="progress-bar" id="progress-bar-@post.Song.Id"></div>
                                                         </div>
                                                     </div>
 
-                                                    <span>@song.Title</span>
+                                                    <audio id="audio-@post.Song.Id" style="display: none;">
+                                                        <source src="@post.Song.FileUrl" type="audio/mpeg">
+                                                    </audio>
+                                                </div>
+                                                <div class="volume-control">
+                                                    <i class="fas fa-volume-up"></i>
+                                                    <input type="range" min="0" max="1" step="0.1" value="1" class="volume-slider" id="volume-slider-@post.Song.Id">
                                                 </div>
                                             </div>
-                                        }
+
+                                            <span onclick="window.location.href='@Url.Action("SongPage", "Song", new { postId = post.Id })'" style="cursor: pointer;">
+                                                @post.Song.Title
+                                            </span>
+                                        </div>
                                     </div>
                                 }
 

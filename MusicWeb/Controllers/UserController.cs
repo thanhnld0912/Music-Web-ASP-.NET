@@ -29,7 +29,7 @@
                 // Otherwise, show the requested user's profile
                 var user = await _context.Users
                     .Include(u => u.Posts)
-                        .ThenInclude(p => p.Songs)
+                        .ThenInclude(p => p.Song)
                     .FirstOrDefaultAsync(u => u.Id == id);
 
                 if (user == null)

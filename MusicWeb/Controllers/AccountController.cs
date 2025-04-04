@@ -106,7 +106,7 @@ namespace MusicWeb.Controllers
                 return View("Login");
             }
 
-            var newUser = new User { Username = name, Email = email, Password = password, Role = "User" };
+            var newUser = new User { Username = name, Email = email, Password = password, Role = "User" , Bio ="No Bio" };
             _context.Users.Add(newUser);
             _context.SaveChanges();
 

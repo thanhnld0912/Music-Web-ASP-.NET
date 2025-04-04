@@ -129,3 +129,24 @@ public class ApplicationDbContext : DbContext
             .OnDelete(DeleteBehavior.Restrict);
     }
 }
+
+    
+    public static void Seed(ApplicationDbContext context)
+    {
+        // Kiểm tra nếu cơ sở dữ liệu không có người dùng nào
+        if (!context.Users.Any())
+        {
+            var adminUser = new User
+            {
+                Username = "admin",
+                Email = "admin@example.com",
+                Password = "Admin@123", // Bạn có thể mã hóa mật khẩu nếu cần
+                Role = "Admin",  // Đặt vai trò là Admin
+                CreatedAt = DateTime.Now,
+                Bio = "Administrator of the MusicWeb platform"
+            };
+
+            context.Users.Add(adminUser);
+            context.SaveChanges();
+        }
+    }

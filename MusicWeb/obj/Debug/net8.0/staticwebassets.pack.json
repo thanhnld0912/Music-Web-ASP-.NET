@@ -53,7 +53,15 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\img\\Image1.jpg",
+=======
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\1.gif",
+      "PackagePath": "staticwebassets\\img\\1.gif"
+    },
+    {
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\Image1.jpg",
+>>>>>>> a52c3e36ce64c5ca285c8f6eb05411bd83f9dec7
       "PackagePath": "staticwebassets\\img\\Image1.jpg"
     },
     {
@@ -77,7 +85,15 @@
       "PackagePath": "staticwebassets\\img\\background.png"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\img\\lgo.png",
+=======
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\download.gif",
+      "PackagePath": "staticwebassets\\img\\download.gif"
+    },
+    {
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\lgo.png",
+>>>>>>> a52c3e36ce64c5ca285c8f6eb05411bd83f9dec7
       "PackagePath": "staticwebassets\\img\\lgo.png"
     },
     {
@@ -89,11 +105,19 @@
       "PackagePath": "staticwebassets\\js\\SongPage.js"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\js\\globalplayer.js",
       "PackagePath": "staticwebassets\\js\\globalplayer.js"
     },
     {
       "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\js\\layout.js",
+=======
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\Profile.js",
+      "PackagePath": "staticwebassets\\js\\Profile.js"
+    },
+    {
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\layout.js",
+>>>>>>> a52c3e36ce64c5ca285c8f6eb05411bd83f9dec7
       "PackagePath": "staticwebassets\\js\\layout.js"
     },
     {
@@ -445,8 +469,13 @@
       "PackagePath": "staticwebassets\\uploads\\Why-are-you-running__7f382526449145bbb40373493c61aa7b.mp3"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\.net\\WebMusicNew\\Music-Web-ASP-.NET\\MusicWeb\\wwwroot\\uploads\\Why-are-you-running__84ea16b446734eb1a7f3b1e8475fe17f.mp3",
       "PackagePath": "staticwebassets\\uploads\\Why-are-you-running__84ea16b446734eb1a7f3b1e8475fe17f.mp3"
+=======
+      "Id": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3",
+      "PackagePath": "staticwebassets\\uploads\\buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3"
+>>>>>>> a52c3e36ce64c5ca285c8f6eb05411bd83f9dec7
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MusicWeb.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

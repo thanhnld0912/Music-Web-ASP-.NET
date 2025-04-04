@@ -24,9 +24,16 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dfsm5h754o"},{"Name":"integrity","Value":"sha256-afIpLNR8CdkVTc5EOAI0CeHFbvMw7yvvGEYf39SrA/Y="},{"Name":"label","Value":"_content/MusicWeb/css/loader.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"952"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022afIpLNR8CdkVTc5EOAI0CeHFbvMw7yvvGEYf39SrA/Y=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 06:10:08 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MusicWeb/css/login.9eya0wo7uk.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"9eya0wo7uk"},{"Name":"integrity","Value":"sha256-oYzXMfsBvwAzFe8FAJqMHwgf2Szrgk9Kt1bkE7WeL34="},{"Name":"label","Value":"_content/MusicWeb/css/login.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5988"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022oYzXMfsBvwAzFe8FAJqMHwgf2Szrgk9Kt1bkE7WeL34=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Mar 2025 07:01:38 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MusicWeb/css/login.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\login.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
+<<<<<<< HEAD
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-YsD0U88rij2tm9jUT\u002BA\u002BiXICWSoo6iqok4uqiMrR8Y8="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5871"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022YsD0U88rij2tm9jUT\u002BA\u002BiXICWSoo6iqok4uqiMrR8Y8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Mar 2025 05:41:27 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
@@ -35,6 +42,10 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"m24kqxv2gh"},{"Name":"integrity","Value":"sha256-YsD0U88rij2tm9jUT\u002BA\u002BiXICWSoo6iqok4uqiMrR8Y8="},{"Name":"label","Value":"_content/MusicWeb/css/login.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5871"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022YsD0U88rij2tm9jUT\u002BA\u002BiXICWSoo6iqok4uqiMrR8Y8=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Mar 2025 05:41:27 GMT"}]]]></ResponseHeaders>
+=======
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-oYzXMfsBvwAzFe8FAJqMHwgf2Szrgk9Kt1bkE7WeL34="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5988"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022oYzXMfsBvwAzFe8FAJqMHwgf2Szrgk9Kt1bkE7WeL34=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Mar 2025 07:01:38 GMT"}]]]></ResponseHeaders>
+>>>>>>> a52c3e36ce64c5ca285c8f6eb05411bd83f9dec7
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MusicWeb/css/newfeed.5ovzph090z.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\newfeed.css'))</AssetFile>
@@ -60,9 +71,16 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vg1lwdhywf"},{"Name":"integrity","Value":"sha256-r/4d3RTfOMlwzGz2Iwk3FOikLy9pjG7uPdmJzr/OSZc="},{"Name":"label","Value":"_content/MusicWeb/css/playlist.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14820"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022r/4d3RTfOMlwzGz2Iwk3FOikLy9pjG7uPdmJzr/OSZc=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 07:45:45 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MusicWeb/css/profile.5boc66y1us.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\profile.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5boc66y1us"},{"Name":"integrity","Value":"sha256-EQRfa6o7w89\u002B\u002Bp/9Hi4csGiFkjJLSgqPH4SqzVLWdtA="},{"Name":"label","Value":"_content/MusicWeb/css/profile.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5703"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022EQRfa6o7w89\u002B\u002Bp/9Hi4csGiFkjJLSgqPH4SqzVLWdtA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 07:33:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MusicWeb/css/profile.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\profile.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
+<<<<<<< HEAD
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-OEVycDawFCtG9bic9XZc9Rt9W2BslW5aL2PeZBcTfP0="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5500"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022OEVycDawFCtG9bic9XZc9Rt9W2BslW5aL2PeZBcTfP0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 03 Apr 2025 06:21:55 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
@@ -71,6 +89,10 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"oo813gwh6c"},{"Name":"integrity","Value":"sha256-OEVycDawFCtG9bic9XZc9Rt9W2BslW5aL2PeZBcTfP0="},{"Name":"label","Value":"_content/MusicWeb/css/profile.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5500"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022OEVycDawFCtG9bic9XZc9Rt9W2BslW5aL2PeZBcTfP0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 03 Apr 2025 06:21:55 GMT"}]]]></ResponseHeaders>
+=======
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-EQRfa6o7w89\u002B\u002Bp/9Hi4csGiFkjJLSgqPH4SqzVLWdtA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5703"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022EQRfa6o7w89\u002B\u002Bp/9Hi4csGiFkjJLSgqPH4SqzVLWdtA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 07:33:56 GMT"}]]]></ResponseHeaders>
+>>>>>>> a52c3e36ce64c5ca285c8f6eb05411bd83f9dec7
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MusicWeb/css/ProfileUser.4sct66svx2.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\ProfileUser.css'))</AssetFile>
@@ -144,6 +166,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 06:10:08 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MusicWeb/img/1.gif">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\1.gif'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Uc5WbTpWE5op4z7LBTHlG2YsE91nAISen2I\u002BuOLe8j0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2761019"},{"Name":"Content-Type","Value":"image/gif"},{"Name":"ETag","Value":"\u0022Uc5WbTpWE5op4z7LBTHlG2YsE91nAISen2I\u002BuOLe8j0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Mar 2025 06:55:58 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MusicWeb/img/1.xcc3hrngzk.gif">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\1.gif'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"xcc3hrngzk"},{"Name":"integrity","Value":"sha256-Uc5WbTpWE5op4z7LBTHlG2YsE91nAISen2I\u002BuOLe8j0="},{"Name":"label","Value":"_content/MusicWeb/img/1.gif"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2761019"},{"Name":"Content-Type","Value":"image/gif"},{"Name":"ETag","Value":"\u0022Uc5WbTpWE5op4z7LBTHlG2YsE91nAISen2I\u002BuOLe8j0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Mar 2025 06:55:58 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MusicWeb/img/admin.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\admin.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -179,6 +213,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-i4e\u002BVSBBBvgI1KBpPdA3X9zD63fc31jGNs\u002BCxoWBu5Y="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"582724"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022i4e\u002BVSBBBvgI1KBpPdA3X9zD63fc31jGNs\u002BCxoWBu5Y=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 07:01:09 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MusicWeb/img/download.4tfp0uz3sj.gif">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\download.gif'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4tfp0uz3sj"},{"Name":"integrity","Value":"sha256-SESD1vgjmxoVox93Q7zAo/nQ2gJHIBBQCroOqauW5z0="},{"Name":"label","Value":"_content/MusicWeb/img/download.gif"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"630491"},{"Name":"Content-Type","Value":"image/gif"},{"Name":"ETag","Value":"\u0022SESD1vgjmxoVox93Q7zAo/nQ2gJHIBBQCroOqauW5z0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Mar 2025 06:36:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MusicWeb/img/download.gif">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\download.gif'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-SESD1vgjmxoVox93Q7zAo/nQ2gJHIBBQCroOqauW5z0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"630491"},{"Name":"Content-Type","Value":"image/gif"},{"Name":"ETag","Value":"\u0022SESD1vgjmxoVox93Q7zAo/nQ2gJHIBBQCroOqauW5z0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Mar 2025 06:36:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MusicWeb/img/Image1.6soeuvejt9.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\Image1.jpg'))</AssetFile>
@@ -299,6 +345,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1\u002BV307qontJdW0VwO\u002BDE/1jE5mvww7fkFFBeC4m1034="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"34491"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00221\u002BV307qontJdW0VwO\u002BDE/1jE5mvww7fkFFBeC4m1034=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 08:46:30 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MusicWeb/js/Profile.a71ac6ffks.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\Profile.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"a71ac6ffks"},{"Name":"integrity","Value":"sha256-ljiG6PuJu\u002BF7psJAVIActR2DX5G0yRDBpzcSWC\u002BuQ4c="},{"Name":"label","Value":"_content/MusicWeb/js/Profile.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3938"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ljiG6PuJu\u002BF7psJAVIActR2DX5G0yRDBpzcSWC\u002BuQ4c=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 08:41:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MusicWeb/js/Profile.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\Profile.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ljiG6PuJu\u002BF7psJAVIActR2DX5G0yRDBpzcSWC\u002BuQ4c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3938"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ljiG6PuJu\u002BF7psJAVIActR2DX5G0yRDBpzcSWC\u002BuQ4c=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 08:41:49 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MusicWeb/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
@@ -1043,6 +1101,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-kvLUP4CZh1eaC7Uflg/mTCnn33puHtFObITMByp50U8="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"42403"},{"Name":"Content-Type","Value":"audio/mpeg"},{"Name":"ETag","Value":"\u0022kvLUP4CZh1eaC7Uflg/mTCnn33puHtFObITMByp50U8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 06:54:15 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MusicWeb/uploads/buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-6Towvn0SOciRgt8qCPyzJ42ynvZ\u002BX\u002BvWxHFdctv6dbw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2032544"},{"Name":"Content-Type","Value":"audio/mpeg"},{"Name":"ETag","Value":"\u00226Towvn0SOciRgt8qCPyzJ42ynvZ\u002BX\u002BvWxHFdctv6dbw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Mar 2025 06:13:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MusicWeb/uploads/buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.v66j7uwue5.mp3">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"v66j7uwue5"},{"Name":"integrity","Value":"sha256-6Towvn0SOciRgt8qCPyzJ42ynvZ\u002BX\u002BvWxHFdctv6dbw="},{"Name":"label","Value":"_content/MusicWeb/uploads/buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2032544"},{"Name":"Content-Type","Value":"audio/mpeg"},{"Name":"ETag","Value":"\u00226Towvn0SOciRgt8qCPyzJ42ynvZ\u002BX\u002BvWxHFdctv6dbw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Mar 2025 06:13:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MusicWeb/uploads/HEHE-BOY-ORIGINAL-MEME_2be237d5f9d642ce9565ed432ee0f9fd.a9aid7mswn.mp3">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\HEHE-BOY-ORIGINAL-MEME_2be237d5f9d642ce9565ed432ee0f9fd.mp3'))</AssetFile>

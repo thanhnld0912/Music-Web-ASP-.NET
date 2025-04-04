@@ -1,104 +1,104 @@
-    @{
-        Layout = null;
-        ViewData["Title"] = "NewFeed - Admin";
-        var isAuthenticated = Context.Session.GetString("UserId") != null;
-        var userId = Context.Session.GetString("UserId");
-        var avatarUrl = Context.Session.GetString("AvatarUrl") ?? "~/img/admin.jpg";
-        @model List<MusicWeb.Models.Post>
-    }
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@ViewData["Title"] - Music Web</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="~/css/newfeed.css">
-    </head>
-    <body onclick="closeAll(event)">
-        <!-- Sidebar -->
-        <div class="sidebar" id="sidebar">
-            <button class="sidebar-toggle" onclick="toggleSidebar(event)">☰</button>
-            <div class="logoimg"> <img src="~/img/lgo.png" /></div>
-            <div class="logo">Your Library</div>
-            <div class="sidebar-section">
-                <p>Your music, our community!</p>
-                <button class="sidebar-button" onclick="toggleChatBox(event, 'playlistBox')">Create playlist</button>
-            </div>
+@{
+    Layout = null;
+    ViewData["Title"] = "NewFeed - Admin";
+    var isAuthenticated = Context.Session.GetString("UserId") != null;
+    var userId = Context.Session.GetString("UserId");
+    var avatarUrl = Context.Session.GetString("AvatarUrl") ?? "~/img/admin.jpg";
+    @model List<MusicWeb.Models.Post>
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Music Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="~/css/newfeed.css">
+</head>
+<body onclick="closeAll(event)">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="sidebar-toggle" onclick="toggleSidebar(event)">☰</button>
+        <div class="logoimg"> <img src="~/img/lgo.png" /></div>
+        <div class="logo">Your Library</div>
+        <div class="sidebar-section">
+            <p>Your music, our community!</p>
+            <button class="sidebar-button" onclick="toggleChatBox(event, 'playlistBox')">Create playlist</button>
+        </div>
 
-            <div class="sidebar-section">
-                <p>Your sound, your story, your stage</p>
-                <button class="sidebar-button" onclick="toggleChatBox(event, 'storyBox')">Share your story</button>
-            </div>
+        <div class="sidebar-section">
+            <p>Your sound, your story, your stage</p>
+            <button class="sidebar-button" onclick="toggleChatBox(event, 'storyBox')">Share your story</button>
+        </div>
 
-            <div class="">
-                <h3>Trending artists ...</h3>
-                <div class="artist-list">
-                    <div class="artist"></div>
-                    <div class="artist"></div>
-                    <div class="artist more">+1</div>
+        <div class="">
+            <h3>Trending artists ...</h3>
+            <div class="artist-list">
+                <div class="artist"></div>
+                <div class="artist"></div>
+                <div class="artist more">+1</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Boxes -->
+    <div class="chat-box" id="playlistBox">
+        <h3>Create Playlist</h3>
+        @if (isAuthenticated)
+        {
+            <input type="text" placeholder="Enter playlist name" />
+            <button class="message-login-button">Create</button>
+        }
+    </div>
+
+    <div class="chat-box" id="storyBox">
+        <h3>Share Your Story</h3>
+        @if (isAuthenticated)
+        {
+            <textarea placeholder="Write your story..."></textarea>
+            <button class="message-login-button">Post</button>
+        }
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content-wrapper">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="What do you want to hear?">
                 </div>
-            </div>
-        </div>
-
-        <!-- Chat Boxes -->
-        <div class="chat-box" id="playlistBox">
-            <h3>Create Playlist</h3>
-            @if (isAuthenticated)
-            {
-                <input type="text" placeholder="Enter playlist name" />
-                <button class="message-login-button">Create</button>
-            }
-        </div>
-
-        <div class="chat-box" id="storyBox">
-            <h3>Share Your Story</h3>
-            @if (isAuthenticated)
-            {
-                <textarea placeholder="Write your story..."></textarea>
-                <button class="message-login-button">Post</button>
-            }
-        </div>
-
-        <!-- Main Content Area -->
-        <div class="content-wrapper">
-            <!-- Navbar -->
-            <div class="navbar">
-                <div class="search-container">
-                    <div class="search-box">
-                        <i class="fas fa-search search-icon"></i>
-                        <input type="text" placeholder="What do you want to hear?">
-                    </div>
-                    <div class="auth-buttons">
-                        @if (isAuthenticated)
-                        {
-                            <a href="@Url.Action("Profile", "Account")" class="avatar-container">
-                                <img src="/img/admin.jpg" alt="Avatar" class="user-avatar">
-                            </a>
-                            <div class=" = auth-button">
+                <div class="auth-buttons">
+                    @if (isAuthenticated)
+                    {
+                        <div class="auth-button">
                             <button class="manage-button" onclick="location.href='@Url.Action("Manage", "Account")'">Manage</button>
                         </div>
-                        }
-                    </div>
+                        <a href="@Url.Action("ProfileAdmin", "Account")" class="avatar-container">
+                            <img src="/img/admin.jpg" alt="Avatar" class="user-avatar">
+                        </a>
+                    }
                 </div>
             </div>
+        </div>
 
-            <!-- NewFeed Content -->
-            <div class="main-content">
-               
-                <div class="filter-tabs">
-                    <button class="filter-tab active">All</button>
-                    <button class="filter-tab">Posts</button>
-                    <button class="filter-tab">Cover</button>
-                    <button class="filter-tab">Self Instrumented</button>
+        <!-- NewFeed Content -->
+        <div class="main-content">
+
+            <div class="filter-tabs">
+                <button class="filter-tab active">All</button>
+                <button class="filter-tab">Posts</button>
+                <button class="filter-tab">Cover</button>
+                <button class="filter-tab">Self Instrumented</button>
 
                 @if (isAuthenticated)
                 {
                     <button onclick="location.href='@Url.Action("UploadPage", "Song")'" class="add-post"><p>+</p></button>
                 }
-                </div>
+            </div>
 
-                <h2>New Feed</h2>
+            <h2>New Feed</h2>
 
 
             <div class="post-topuser">
@@ -247,45 +247,38 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
-
-              
-            </div>
-
-     
         </div>
-
-
-        <!-- Separated Comment Section - This will be displayed as an overlay -->
-        <div id="comment-overlay" class="comment-overlay">
-            <div class="comment-container">
-                <div class="comment-header">
-                    <h3>Comments</h3>
-                    <button class="close-comment-btn" onclick="closeCommentSection()">
-                        <i class="fas fa-times"></i>
-                    </button>
+    </div>
+    <!-- Separated Comment Section - This will be displayed as an overlay -->
+    <div id="comment-overlay" class="comment-overlay">
+        <div class="comment-container">
+            <div class="comment-header">
+                <h3>Comments</h3>
+                <button class="close-comment-btn" onclick="closeCommentSection()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="fb-comment-section">
+                <div class="fb-comment-input-container">
+                    <div class="comment-avatar">
+                        <img src="~/img/avatar.jpg" alt="avatar" class="comment-user-avatar">
+                    </div>
+                    <div class="fb-comment-input-wrapper">
+                        <input type="text" placeholder="Write a comment..." class="fb-comment-input">
+                        <div class="fb-comment-tools">
+                            <i class="fas fa-smile"></i>
+                            <i class="fas fa-camera"></i>
+                            <i class="fas fa-paper-plane" onclick="submitComment(event)"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="fb-comment-section">
-                    <div class="fb-comment-input-container">
-                        <div class="comment-avatar">
-                            <img src="~/img/avatar.jpg" alt="avatar" class="comment-user-avatar">
-                        </div>
-                        <div class="fb-comment-input-wrapper">
-                            <input type="text" placeholder="Write a comment..." class="fb-comment-input">
-                            <div class="fb-comment-tools">
-                                <i class="fas fa-smile"></i>
-                                <i class="fas fa-camera"></i>
-                                <i class="fas fa-paper-plane" onclick="submitComment(event)"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fb-comments-list">
-                        <!-- Comments will be added here -->
-                    </div>
+                <div class="fb-comments-list">
+                    <!-- Comments will be added here -->
                 </div>
             </div>
         </div>
-    <script src = "~/js/NewFeed.js"></script>
-    </body>
-    </html>
+    </div>
+    <script src="~/js/NewFeed.js"></script>
+</body>
+</html>

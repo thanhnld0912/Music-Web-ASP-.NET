@@ -10,9 +10,11 @@ wwwroot\css\songpage.css
 wwwroot\css\style-carousel.css
 wwwroot\css\upload.css
 wwwroot\favicon.ico
+wwwroot\img\1.gif
 wwwroot\img\admin.jpg
 wwwroot\img\avatar.jpg
 wwwroot\img\background.png
+wwwroot\img\download.gif
 wwwroot\img\Image1.jpg
 wwwroot\img\Image2.jpg
 wwwroot\img\Image3.jpg
@@ -20,9 +22,14 @@ wwwroot\img\lgo.png
 wwwroot\js\globalplayer.js
 wwwroot\js\layout.js
 wwwroot\js\Login.js
+<<<<<<< HEAD
 wwwroot\js\newfeed.js
 wwwroot\js\playlistpage.js
 wwwroot\js\profileuser.js
+=======
+wwwroot\js\NewFeed.js
+wwwroot\js\Profile.js
+>>>>>>> a52c3e36ce64c5ca285c8f6eb05411bd83f9dec7
 wwwroot\js\site.js
 wwwroot\js\SongPage.js
 wwwroot\js\uploadfile.js
@@ -83,7 +90,11 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+<<<<<<< HEAD
 wwwroot\uploads\HEHE-BOY-ORIGINAL-MEME_052833700fb44148a2f330aec865bca6.mp3
+=======
+wwwroot\uploads\buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3
+>>>>>>> a52c3e36ce64c5ca285c8f6eb05411bd83f9dec7
 wwwroot\uploads\HEHE-BOY-ORIGINAL-MEME_2be237d5f9d642ce9565ed432ee0f9fd.mp3
 wwwroot\uploads\HEHE-BOY-ORIGINAL-MEME_2f816bc8b93d4051993ff6a28f58cf7c.mp3
 wwwroot\uploads\HEHE-BOY-ORIGINAL-MEME_2fb5bfff74ed4b7ca60dde790edc99e3.mp3

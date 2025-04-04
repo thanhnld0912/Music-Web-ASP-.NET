@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "h2pzq3MLYhd1h9xNHBVI5OFZuYdIsJFX9CQhZV8FmOU=",
+  "Hash": "N1Ed/0VlZWZN+dvU9aDH03JN9DaTR1nmCUp6jlejaXk=",
   "Source": "MusicWeb",
   "BasePath": "_content/MusicWeb",
   "Mode": "Default",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "m24kqxv2gh",
-      "Integrity": "YsD0U88rij2tm9jUT+A+iXICWSoo6iqok4uqiMrR8Y8=",
+      "Fingerprint": "9eya0wo7uk",
+      "Integrity": "oYzXMfsBvwAzFe8FAJqMHwgf2Szrgk9Kt1bkE7WeL34=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\login.css"
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "oo813gwh6c",
-      "Integrity": "OEVycDawFCtG9bic9XZc9Rt9W2BslW5aL2PeZBcTfP0=",
+      "Fingerprint": "5boc66y1us",
+      "Integrity": "EQRfa6o7w89++p/9Hi4csGiFkjJLSgqPH4SqzVLWdtA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\profile.css"
@@ -248,6 +248,27 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\1.gif",
+      "SourceId": "MusicWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\",
+      "BasePath": "_content/MusicWeb",
+      "RelativePath": "img/1#[.{fingerprint}]?.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xcc3hrngzk",
+      "Integrity": "Uc5WbTpWE5op4z7LBTHlG2YsE91nAISen2I+uOLe8j0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\1.gif"
+    },
+    {
       "Identity": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\admin.jpg",
       "SourceId": "MusicWeb",
       "SourceType": "Discovered",
@@ -309,6 +330,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\background.png"
+    },
+    {
+      "Identity": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\download.gif",
+      "SourceId": "MusicWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\",
+      "BasePath": "_content/MusicWeb",
+      "RelativePath": "img/download#[.{fingerprint}]?.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4tfp0uz3sj",
+      "Integrity": "SESD1vgjmxoVox93Q7zAo/nQ2gJHIBBQCroOqauW5z0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\download.gif"
     },
     {
       "Identity": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\Image1.jpg",
@@ -456,6 +498,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\NewFeed.js"
+    },
+    {
+      "Identity": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\Profile.js",
+      "SourceId": "MusicWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\",
+      "BasePath": "_content/MusicWeb",
+      "RelativePath": "js/Profile#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "a71ac6ffks",
+      "Integrity": "ljiG6PuJu+F7psJAVIActR2DX5G0yRDBpzcSWC+uQ4c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Profile.js"
     },
     {
       "Identity": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\site.js",
@@ -1676,6 +1739,27 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3",
+      "SourceId": "MusicWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\",
+      "BasePath": "_content/MusicWeb",
+      "RelativePath": "uploads/buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d#[.{fingerprint}]?.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "v66j7uwue5",
+      "Integrity": "6Towvn0SOciRgt8qCPyzJ42ynvZ+X+vWxHFdctv6dbw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3"
+    },
+    {
       "Identity": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\HEHE-BOY-ORIGINAL-MEME_2be237d5f9d642ce9565ed432ee0f9fd.mp3",
       "SourceId": "MusicWeb",
       "SourceType": "Discovered",
@@ -2117,6 +2201,51 @@
       ]
     },
     {
+      "Route": "css/login.9eya0wo7uk.css",
+      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5988"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oYzXMfsBvwAzFe8FAJqMHwgf2Szrgk9Kt1bkE7WeL34=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 07:01:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9eya0wo7uk"
+        },
+        {
+          "Name": "label",
+          "Value": "css/login.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oYzXMfsBvwAzFe8FAJqMHwgf2Szrgk9Kt1bkE7WeL34="
+        }
+      ]
+    },
+    {
       "Route": "css/login.css",
       "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\login.css",
       "Selectors": [],
@@ -2127,7 +2256,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5871"
+          "Value": "5988"
         },
         {
           "Name": "Content-Type",
@@ -2135,11 +2264,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YsD0U88rij2tm9jUT+A+iXICWSoo6iqok4uqiMrR8Y8=\""
+          "Value": "\"oYzXMfsBvwAzFe8FAJqMHwgf2Szrgk9Kt1bkE7WeL34=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 15:23:56 GMT"
+          "Value": "Mon, 24 Mar 2025 07:01:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2149,52 +2278,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YsD0U88rij2tm9jUT+A+iXICWSoo6iqok4uqiMrR8Y8="
-        }
-      ]
-    },
-    {
-      "Route": "css/login.m24kqxv2gh.css",
-      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\login.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5871"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"YsD0U88rij2tm9jUT+A+iXICWSoo6iqok4uqiMrR8Y8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 15:23:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "m24kqxv2gh"
-        },
-        {
-          "Name": "label",
-          "Value": "css/login.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-YsD0U88rij2tm9jUT+A+iXICWSoo6iqok4uqiMrR8Y8="
+          "Value": "sha256-oYzXMfsBvwAzFe8FAJqMHwgf2Szrgk9Kt1bkE7WeL34="
         }
       ]
     },
@@ -2281,6 +2365,51 @@
       ]
     },
     {
+      "Route": "css/profile.5boc66y1us.css",
+      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\profile.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5703"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EQRfa6o7w89++p/9Hi4csGiFkjJLSgqPH4SqzVLWdtA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 07:33:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5boc66y1us"
+        },
+        {
+          "Name": "label",
+          "Value": "css/profile.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EQRfa6o7w89++p/9Hi4csGiFkjJLSgqPH4SqzVLWdtA="
+        }
+      ]
+    },
+    {
       "Route": "css/profile.css",
       "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\profile.css",
       "Selectors": [],
@@ -2291,7 +2420,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5500"
+          "Value": "5703"
         },
         {
           "Name": "Content-Type",
@@ -2299,11 +2428,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OEVycDawFCtG9bic9XZc9Rt9W2BslW5aL2PeZBcTfP0=\""
+          "Value": "\"EQRfa6o7w89++p/9Hi4csGiFkjJLSgqPH4SqzVLWdtA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 07:20:48 GMT"
+          "Value": "Tue, 01 Apr 2025 07:33:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2313,52 +2442,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-OEVycDawFCtG9bic9XZc9Rt9W2BslW5aL2PeZBcTfP0="
-        }
-      ]
-    },
-    {
-      "Route": "css/profile.oo813gwh6c.css",
-      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\css\\profile.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5500"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OEVycDawFCtG9bic9XZc9Rt9W2BslW5aL2PeZBcTfP0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 07:20:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "oo813gwh6c"
-        },
-        {
-          "Name": "label",
-          "Value": "css/profile.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-OEVycDawFCtG9bic9XZc9Rt9W2BslW5aL2PeZBcTfP0="
+          "Value": "sha256-EQRfa6o7w89++p/9Hi4csGiFkjJLSgqPH4SqzVLWdtA="
         }
       ]
     },
@@ -2773,6 +2857,88 @@
       ]
     },
     {
+      "Route": "img/1.gif",
+      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\1.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2761019"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Uc5WbTpWE5op4z7LBTHlG2YsE91nAISen2I+uOLe8j0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 06:55:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Uc5WbTpWE5op4z7LBTHlG2YsE91nAISen2I+uOLe8j0="
+        }
+      ]
+    },
+    {
+      "Route": "img/1.xcc3hrngzk.gif",
+      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\1.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2761019"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Uc5WbTpWE5op4z7LBTHlG2YsE91nAISen2I+uOLe8j0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 06:55:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xcc3hrngzk"
+        },
+        {
+          "Name": "label",
+          "Value": "img/1.gif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Uc5WbTpWE5op4z7LBTHlG2YsE91nAISen2I+uOLe8j0="
+        }
+      ]
+    },
+    {
       "Route": "img/admin.jpg",
       "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\admin.jpg",
       "Selectors": [],
@@ -3015,6 +3181,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-i4e+VSBBBvgI1KBpPdA3X9zD63fc31jGNs+CxoWBu5Y="
+        }
+      ]
+    },
+    {
+      "Route": "img/download.4tfp0uz3sj.gif",
+      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\download.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "630491"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SESD1vgjmxoVox93Q7zAo/nQ2gJHIBBQCroOqauW5z0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 06:36:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4tfp0uz3sj"
+        },
+        {
+          "Name": "label",
+          "Value": "img/download.gif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SESD1vgjmxoVox93Q7zAo/nQ2gJHIBBQCroOqauW5z0="
+        }
+      ]
+    },
+    {
+      "Route": "img/download.gif",
+      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\img\\download.gif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "630491"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/gif"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SESD1vgjmxoVox93Q7zAo/nQ2gJHIBBQCroOqauW5z0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 06:36:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SESD1vgjmxoVox93Q7zAo/nQ2gJHIBBQCroOqauW5z0="
         }
       ]
     },
@@ -3589,6 +3837,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-5JWMxHjeH1seBWwoqBAP4PIRXCKX1wGSsvORy7W9gh0="
+        }
+      ]
+    },
+    {
+      "Route": "js/Profile.a71ac6ffks.js",
+      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\Profile.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3938"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ljiG6PuJu+F7psJAVIActR2DX5G0yRDBpzcSWC+uQ4c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 08:41:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a71ac6ffks"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Profile.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ljiG6PuJu+F7psJAVIActR2DX5G0yRDBpzcSWC+uQ4c="
+        }
+      ]
+    },
+    {
+      "Route": "js/Profile.js",
+      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\js\\Profile.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3938"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ljiG6PuJu+F7psJAVIActR2DX5G0yRDBpzcSWC+uQ4c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 08:41:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ljiG6PuJu+F7psJAVIActR2DX5G0yRDBpzcSWC+uQ4c="
         }
       ]
     },
@@ -8509,6 +8839,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-dxcTgVEU2w9SBE66W2a+idoNOhTF6ekbYng495D1b7E="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3",
+      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2032544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "audio/mpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6Towvn0SOciRgt8qCPyzJ42ynvZ+X+vWxHFdctv6dbw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 06:13:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6Towvn0SOciRgt8qCPyzJ42ynvZ+X+vWxHFdctv6dbw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.v66j7uwue5.mp3",
+      "AssetFile": "D:\\FPT\\CN6\\MusicWeb\\MusicWeb\\wwwroot\\uploads\\buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2032544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "audio/mpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6Towvn0SOciRgt8qCPyzJ42ynvZ+X+vWxHFdctv6dbw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 06:13:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v66j7uwue5"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/buruakaibu-blue-archive-ost-113-usagi-flap_735926718e474db7a9e75c1136073e2d.mp3"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6Towvn0SOciRgt8qCPyzJ42ynvZ+X+vWxHFdctv6dbw="
         }
       ]
     },

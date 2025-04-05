@@ -21,7 +21,10 @@ namespace MusicWeb.Models
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
         public virtual User User { get; set; }
-        public virtual ICollection<Song> Songs { get; set; } = new List<Song>();
+
+        [ForeignKey("Song")]
+        public int? SongId { get; set; }  
+        public virtual Song? Song { get; set; }  
         public virtual ICollection<Like> Likes { get; set; }
         public virtual ICollection<Dislike> Dislikes { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }

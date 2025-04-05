@@ -14,7 +14,7 @@ namespace MusicWeb.Models
         public int UserId { get; set; }
 
         [ForeignKey("Post")]
-        public int? PostId { get; set; }
+        public int PostId { get; set; }
 
         [Required]
         [MaxLength(1000)]

@@ -1,5 +1,5 @@
 ﻿let currentPostId = null;
-const currentUserId = '@(userId != null ? userId : "null")';  // Chèn giá trị Razor dưới dạng chuỗi
+const currentUserId = document.getElementById('current-user-id').value;
 let commentsStore = {};
 
 
@@ -17,6 +17,51 @@ function toggleChatBox(event, boxId) {
     event.stopPropagation();
     closeAll(event);
     document.getElementById(boxId).style.display = 'block';
+}
+function createPlaylist() {
+    const playlistNameInput = document.querySelector('#playlistBox input[type="text"]');
+    const playlistName = playlistNameInput.value.trim();
+
+    if (!playlistName) {
+        showNotification("Tên playlist không được để trống", "error");
+        return;
+    }
+
+    // Create AJAX request
+    const xhr = new XMLHttpRequest();
+
+    // Option 1: Send as form data (recommended)
+    xhr.open("POST", "/Playlist/CreatePlaylist", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                try {
+                    const response = JSON.parse(xhr.responseText);
+                    if (response.success) {
+                        window.location.href = `/Playlist/PlaylistPage?id=${response.playlist.id}`;
+                    } else {
+                        showNotification(response.message || "Không thể tạo playlist", "error");
+                    }
+                } catch (error) {
+                    console.error("Lỗi khi phân tích phản hồi:", error);
+                    showNotification("Đã xảy ra lỗi khi tạo playlist", "error");
+                }
+            } else {
+                console.error("Lỗi khi tạo playlist:", xhr.status, xhr.responseText);
+                try {
+                    const response = JSON.parse(xhr.responseText);
+                    showNotification(response.message || "Không thể tạo playlist", "error");
+                } catch (error) {
+                    showNotification("Đã xảy ra lỗi khi tạo playlist", "error");
+                }
+            }
+        }
+    };
+
+    // Send as form data
+    xhr.send(`playlistName=${encodeURIComponent(playlistName)}`);
 }
 
 function closeAll(event) {
@@ -37,7 +82,7 @@ function closeAll(event) {
 
 function likePost(button, postId) {
     if (!currentUserId || currentUserId === "null") {
-        alert("Vui lòng đăng nhập để thích bài viết");
+        showNotification("Vui lòng đăng nhập để thích bài viết", "warning");
         return;
     }
 
@@ -82,7 +127,7 @@ function likePost(button, postId) {
                 }
             } else {
                 console.error("Lỗi khi thích bài viết:", xhr.responseText);
-                alert("Không thể thích bài viết. Vui lòng thử lại sau.");
+                showNotification("Không thể thích bài viết. Vui lòng thử lại sau.", "error");
             }
         }
     };
@@ -92,7 +137,7 @@ function likePost(button, postId) {
 
 function dislikePost(button, postId) {
     if (!currentUserId || currentUserId === "null") {
-        alert("Vui lòng đăng nhập để không thích bài viết");
+        showNotification("Vui lòng đăng nhập để không thích bài viết", "warning");
         return;
     }
 
@@ -137,7 +182,7 @@ function dislikePost(button, postId) {
                 }
             } else {
                 console.error("Lỗi khi không thích bài viết:", xhr.responseText);
-                alert("Không thể không thích bài viết. Vui lòng thử lại sau.");
+                showNotification("Không thể không thích bài viết. Vui lòng thử lại sau.", "error");
             }
         }
     };
@@ -186,7 +231,7 @@ function toggleCommentSection(button, postId) {
     event.stopPropagation();
 
     if (!currentUserId) {
-        alert("Please login to view and add comments");
+        showNotification("Please login to view and add comments", "warning");
         return;
     }
 
@@ -277,7 +322,7 @@ function closeCommentSection() {
 
 function submitComment(event) {
     if (!currentUserId) {
-        alert("Vui lòng đăng nhập để bình luận");
+        showNotification("Vui lòng đăng nhập để bình luận", "warning");
         return;
     }
 
@@ -324,7 +369,7 @@ function submitComment(event) {
                     }
                 } else {
                     console.error("Lỗi khi thêm bình luận:", xhr.responseText);
-                    alert("Không thể thêm bình luận. Vui lòng thử lại sau.");
+                    showNotification("Không thể thêm bình luận. Vui lòng thử lại sau.", "error");
                 }
             }
         };
@@ -341,24 +386,30 @@ function createCommentElement(comment) {
     const formattedDate = commentDate.toLocaleString();
 
     commentItem.innerHTML = `
-                <div class="comment-avatar">
-                    <img src="~/img/avatar.jpg" alt="avatar" class="comment-user-avatar">
-                </div>
-                <div class="fb-comment-content">
-                    <div class="fb-comment-author">${comment.userName || 'User'}</div>
-                    <div class="fb-comment-text">${comment.content}</div>
-                    <div class="fb-comment-time">${formattedDate}</div>
-                    <div class="fb-comment-actions">
-                        <span class="fb-comment-action">Like</span>
-                        <span class="fb-comment-action">Reply</span>
-                    </div>
-                </div>
-            `;
+                                <div class="comment-avatar">
+                                    <img src="~/img/avatar.jpg" alt="avatar" class="comment-user-avatar">
+                                </div>
+                                <div class="fb-comment-content">
+                                    <div class="fb-comment-author">${comment.userName || 'User'}</div>
+                                    <div class="fb-comment-text">${comment.content}</div>
+                                    <div class="fb-comment-time">${formattedDate}</div>
+                                    <div class="fb-comment-actions">
+                                        <span class="fb-comment-action">Like</span>
+                                        <span class="fb-comment-action">Reply</span>
+                                    </div>
+                                </div>
+                            `;
 
     return commentItem;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    console.log('Script is loaded and running');
+    // Create notification container if it doesn't exist
+    if (!document.getElementById('notification-container')) {
+        createNotificationModal();
+    }
+
     // Load all comment counts when page loads
     loadAllCommentCounts();
 
@@ -485,3 +536,385 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Các hàm xử lý các nút khác...
 });
+
+
+let postToDelete = null;
+let postToEdit = null;
+let originalImageUrl = null;
+let newImageFile = null;
+
+function togglePostMenu(event, postId) {
+    event.stopPropagation();
+
+    // Truyền event vào hàm closeAll
+    closeAll(event);
+
+    const menu = document.getElementById(`postMenu-${postId}`);
+    if (menu) {
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    } else {
+        console.error("Không tìm thấy menu cho postId:", postId);
+    }
+}
+
+// Edit post
+function editPost(postId) {
+    if (!currentUserId) {
+        showNotification("Please log in to edit posts", "warning");
+        return;
+    }
+
+    // Fetch post details
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", `/Post/GetPost/${postId}`, true);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                try {
+                    const post = JSON.parse(xhr.responseText);
+
+                    // Check if current user is the post owner
+                    if (parseInt(currentUserId) !== post.userId) {
+                        showNotification("You can only edit your own posts", "warning");
+                        return;
+                    }
+
+                    // Populate edit form
+                    document.getElementById('edit-post-id').value = post.id;
+                    document.getElementById('edit-post-content').value = post.content;
+
+                    // Handle image if exists
+                    if (post.imageUrl) {
+                        document.getElementById('edit-image-preview').src = post.imageUrl;
+                        document.getElementById('edit-image-preview-container').style.display = 'block';
+                        originalImageUrl = post.imageUrl;
+                    } else {
+                        document.getElementById('edit-image-preview-container').style.display = 'none';
+                        originalImageUrl = null;
+                    }
+
+                    // Show edit form
+                    document.getElementById('edit-post-overlay').style.display = 'flex';
+                    postToEdit = postId;
+
+                    // Close post menu
+                    document.getElementById(`postMenu-${postId}`).style.display = 'none';
+                } catch (error) {
+                    console.error("Error parsing post data:", error);
+                    showNotification("Could not load post data. Please try again.", "error");
+                }
+            } else {
+                console.error("Error fetching post:", xhr.responseText);
+                showNotification("Could not load post data. Please try again.", "error");
+            }
+        }
+    };
+
+    xhr.send();
+}
+
+// Save post edit
+function savePostEdit() {
+    const postId = document.getElementById('edit-post-id').value;
+    const content = document.getElementById('edit-post-content').value.trim();
+
+    if (!content) {
+        showNotification("Post content cannot be empty", "error");
+        return;
+    }
+
+    // Create edit data
+    const editData = {
+        userId: parseInt(currentUserId),
+        content: content,
+        imageUrl: originalImageUrl
+    };
+
+    // If there's a new image, we would handle image upload here
+    // For now, we'll just use the original image URL
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", `/Post/EditPost/${postId}`, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                try {
+                    const response = JSON.parse(xhr.responseText);
+
+                    // Update post in the UI
+                    const postElement = document.querySelector(`.post[data-post-id="${postId}"]`);
+                    if (postElement) {
+                        const contentEl = postElement.querySelector('.post-content p');
+                        if (contentEl) {
+                            contentEl.textContent = content;
+                        }
+
+                        // Update image if needed
+                        const imageEl = postElement.querySelector('.post-image');
+                        if (editData.imageUrl) {
+                            if (imageEl) {
+                                imageEl.src = editData.imageUrl;
+                            } else {
+                                const contentDiv = postElement.querySelector('.post-content');
+                                const newImg = document.createElement('img');
+                                newImg.src = editData.imageUrl;
+                                newImg.className = 'post-image';
+                                contentDiv.appendChild(newImg);
+                            }
+                        } else if (imageEl) {
+                            imageEl.remove();
+                        }
+                    }
+
+                    // Close edit form
+                    closeEditForm();
+
+                    // Show success message
+                    showNotification("Post updated successfully", "success");
+                } catch (error) {
+                    console.error("Error parsing response:", error);
+                    showNotification("Could not update post. Please try again.", "error");
+                }
+            } else {
+                console.error("Error updating post:", xhr.responseText);
+                showNotification("Could not update post. Please try again.", "error");
+            }
+        }
+    };
+
+    xhr.send(JSON.stringify(editData));
+}
+
+// Close edit form
+function closeEditForm() {
+    document.getElementById('edit-post-overlay').style.display = 'none';
+    document.getElementById('edit-post-id').value = '';
+    document.getElementById('edit-post-content').value = '';
+    document.getElementById('edit-image-preview-container').style.display = 'none';
+    document.getElementById('edit-image-preview').src = '';
+    postToEdit = null;
+    originalImageUrl = null;
+    newImageFile = null;
+}
+
+// Functions for image preview in edit form
+function addEditImage() {
+    document.getElementById('edit-image-upload').click();
+}
+
+function previewEditImage(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            document.getElementById('edit-image-preview').src = e.target.result;
+            document.getElementById('edit-image-preview-container').style.display = 'block';
+            newImageFile = file;
+            originalImageUrl = null; // We'll replace with the new image
+        }
+        reader.readAsDataURL(file);
+    }
+}
+
+function removeEditImage() {
+    document.getElementById('edit-image-preview-container').style.display = 'none';
+    document.getElementById('edit-image-preview').src = '';
+    document.getElementById('edit-image-upload').value = '';
+    newImageFile = null;
+    originalImageUrl = null;
+}
+
+// Delete post functions
+function confirmDeletePost(postId) {
+    console.log("confirmDeletePost đã được gọi với postId:", postId);
+    postToDelete = postId;
+    document.getElementById('delete-confirm-overlay').style.display = 'block';
+
+    // Kiểm tra xem phần tử menu có tồn tại không
+    const menu = document.getElementById(`postMenu-${postId}`);
+    console.log("Menu element:", menu);
+    if (menu) {
+        menu.style.display = 'none';
+    }
+}
+
+function closeDeleteConfirm() {
+    document.getElementById('delete-confirm-overlay').style.display = 'none';
+    postToDelete = null;
+}
+
+function executeDeletePost() {
+    if (!postToDelete || !currentUserId) {
+        closeDeleteConfirm();
+        return;
+    }
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", `/Post/DeletePost/${postToDelete}`, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                // Remove post from UI
+                const postElement = document.querySelector(`.post[data-post-id="${postToDelete}"]`);
+                if (postElement) {
+                    postElement.remove();
+                }
+
+                closeDeleteConfirm();
+                showNotification("Post deleted successfully", "success");
+            } else {
+                console.error("Error deleting post:", xhr.responseText);
+                showNotification("Could not delete post. Please try again.", "error");
+                closeDeleteConfirm();
+            }
+        }
+    };
+
+    xhr.send(JSON.stringify(parseInt(currentUserId)));
+}
+
+// Close menus when clicking outside
+document.addEventListener('click', function (event) {
+    // Close post menus when clicking outside
+    if (!event.target.closest('.post-options') && !event.target.closest('.post-menu')) {
+        document.querySelectorAll('.post-menu').forEach(menu => {
+            menu.style.display = 'none';
+        });
+    }
+
+    // Don't close edit overlay when clicking inside it
+    if (document.getElementById('edit-post-overlay').style.display === 'flex' &&
+        !event.target.closest('.edit-container') &&
+        !event.target.closest('.post-options')) {
+        closeEditForm();
+    }
+
+    // Don't close delete confirm when clicking inside it
+    if (document.getElementById('delete-confirm-overlay').style.display === 'flex' &&
+        !event.target.closest('.confirm-container')) {
+        closeDeleteConfirm();
+    }
+});
+
+
+
+
+/*NOTIFICATION */
+function createNotificationModal() {
+    const notificationContainer = document.createElement('div');
+    notificationContainer.id = 'notification-container';
+    notificationContainer.className = 'notification-container';
+    document.body.appendChild(notificationContainer);
+
+    // Add CSS for notification
+    const style = document.createElement('style');
+    style.textContent = `
+                .notification-container {
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 9999;
+                }
+
+                .notification {
+                    margin-bottom: 10px;
+                    padding: 15px 25px;
+                    border-radius: 5px;
+                    color: white;
+                    font-weight: bold;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    min-width: 250px;
+                    max-width: 350px;
+                    animation: slideIn 0.5s, fadeOut 0.5s 3.5s forwards;
+                    cursor: pointer;
+                }
+
+                .notification-success {
+                    background-color: #4CAF50;
+                }
+
+                .notification-error {
+                    background-color: #f44336;
+                }
+
+                .notification-warning {
+                    background-color: #ff9800;
+                }
+
+                .notification-info {
+                    background-color: #2196F3;
+                }
+
+                .notification i {
+                    margin-right: 10px;
+                }
+
+        @keyframes slideIn {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+
+        @keyframes fadeOut {
+                    from {
+                        opacity: 1;
+                    }
+                    to {
+                        opacity: 0;
+                    }
+                }
+            `;
+    document.head.appendChild(style);
+}
+
+function showNotification(message, type = 'info') {
+    const container = document.getElementById('notification-container');
+    if (!container) return;
+
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+
+    let icon = '';
+    switch (type) {
+        case 'success':
+            icon = '<i class="fas fa-check-circle"></i>';
+            break;
+        case 'error':
+            icon = '<i class="fas fa-times-circle"></i>';
+            break;
+        case 'warning':
+            icon = '<i class="fas fa-exclamation-triangle"></i>';
+            break;
+        case 'info':
+            icon = '<i class="fas fa-info-circle"></i>';
+            break;
+    }
+
+    notification.innerHTML = `${icon}<span>${message}</span>`;
+
+    notification.addEventListener('click', function () {
+        container.removeChild(notification);
+    });
+
+    container.appendChild(notification);
+
+    // Auto remove after 4 seconds
+    setTimeout(() => {
+        if (notification.parentNode === container) {
+            container.removeChild(notification);
+        }
+    }, 4000);
+}

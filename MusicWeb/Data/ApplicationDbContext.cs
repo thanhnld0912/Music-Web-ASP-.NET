@@ -128,7 +128,7 @@ public class ApplicationDbContext : DbContext
             .HasForeignKey(s => s.ArtistId)
             .OnDelete(DeleteBehavior.Restrict);
     }
-}
+
 
     
     public static void Seed(ApplicationDbContext context)
@@ -150,3 +150,4 @@ public class ApplicationDbContext : DbContext
             context.SaveChanges();
         }
     }
+}

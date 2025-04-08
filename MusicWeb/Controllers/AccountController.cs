@@ -104,8 +104,6 @@ namespace MusicWeb.Controllers
 
             return Json(new { success = true });
         }
-
-
         public IActionResult Login()
         {
             return View();
@@ -143,9 +141,6 @@ namespace MusicWeb.Controllers
             ViewBag.Error = "Invalid email or password.";
             return View();
         }
-
-
-
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
